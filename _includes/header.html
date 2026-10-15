@@ -1,11 +1,12 @@
 {%- comment -%}
   The wordmark leads home, the anchors jump to the home page's sections, and the download button stays in reach
-  while the page scrolls. Harmolo, who makes folino, is one link away in the footer.
+  while the page scrolls, all in `home_locale` (see the layout). Harmolo, who makes folino, is one link away in
+  the footer.
 {%- endcomment -%}
-{%- assign fh = site.data.home[page.locale] -%}
-{%- include locale-url.html code=page.locale kind='home' -%}
+{%- assign fh = site.data.home[home_locale] -%}
+{%- include locale-url.html code=home_locale kind='home' -%}
 {%- assign home_url = locale_url | relative_url -%}
-{%- include locale-url.html code=page.locale kind='faq' -%}
+{%- include locale-url.html code=home_locale kind='faq' -%}
 {%- assign faq_url = locale_url | relative_url -%}
 <header class="site-header">
   <div class="fol-container fol-header__inner">

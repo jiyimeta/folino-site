@@ -1,8 +1,10 @@
-# `locales` lists the languages the pages are published in, in switcher order -
-# the five folino itself ships in. A language is added here only once the app
-# ships in it and both pages have been translated (_data/home.yml, _data/faq.yml),
-# and it also needs an entry in _data/locales.yml, i18n.yml, stores.yml and
-# badges.yml, plus its badge files under assets/badges/.
+# `locales` lists the languages the home page and the FAQ are published in, in
+# switcher order - the five folino itself ships in. A language is added here only
+# once the app ships in it and both pages have been translated (_data/home.yml,
+# _data/faq.yml), and it also needs an entry in stores.yml and badges.yml, plus
+# its badge files under assets/badges/. The privacy policy is published in every
+# language of _data/locales.yml; a policy page in one of the others links to the
+# English home page and FAQ.
 locales: [en, ja, ko, zh-Hans, zh-Hant]
 
 # The App Store id, for the Smart App Banner Safari shows above every page.

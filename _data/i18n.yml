@@ -40,3 +40,69 @@ zh-Hant:
   stores:
     ios: App Store
     android: Google Play
+
+# The languages below have only the privacy policy (see _data/locales.yml).
+
+de:
+  language_label: Sprache
+  email_label: E-Mail
+  privacy_link: Datenschutzerklärung
+  stores:
+    ios: App Store
+    android: Google Play
+
+es:
+  language_label: Idioma
+  email_label: Correo electrónico
+  privacy_link: Política de privacidad
+  stores:
+    ios: App Store
+    android: Google Play
+
+fr:
+  language_label: Langue
+  email_label: E-mail
+  privacy_link: Politique de confidentialité
+  stores:
+    ios: App Store
+    android: Google Play
+
+it:
+  language_label: Lingua
+  email_label: Email
+  privacy_link: Informativa sulla privacy
+  stores:
+    ios: App Store
+    android: Google Play
+
+nl:
+  language_label: Taal
+  email_label: E-mail
+  privacy_link: Privacybeleid
+  stores:
+    ios: App Store
+    android: Google Play
+
+pt-BR:
+  language_label: Idioma
+  email_label: E-mail
+  privacy_link: Política de Privacidade
+  stores:
+    ios: App Store
+    android: Google Play
+
+ru:
+  language_label: Язык
+  email_label: Эл. почта
+  privacy_link: Политика конфиденциальности
+  stores:
+    ios: App Store
+    android: Google Play
+
+tr:
+  language_label: Dil
+  email_label: E-posta
+  privacy_link: Gizlilik Politikası
+  stores:
+    ios: App Store
+    android: Google Play

@@ -2,8 +2,7 @@ title: folino
 email: contact@harmolo.com
 url: https://folino.app
 
-# Harmolo, who makes folino, keeps its own site. folino's privacy policy lives there rather than here: the App
-# Store, Google Play and the app itself all link to it on harmolo.com.
+# Harmolo, who makes folino, keeps its own site; the footer links to it, and the privacy policy to Harmolo's own.
 harmolo_url: https://harmolo.com
 
 # Overriding `exclude` replaces Jekyll's defaults, so the usual entries are

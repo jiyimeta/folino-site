@@ -257,6 +257,47 @@ a {
   opacity: 0.82;
 }
 
+/* ----------------------------------------------------------------- prose */
+
+.prose {
+  padding: clamp(40px, 7vw, 72px) 0 clamp(48px, 8vw, 88px);
+}
+
+.prose h1 {
+  margin: 0 0 0.7em;
+  font-size: clamp(1.9rem, 5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.prose h2 {
+  margin: 2.4em 0 0.7em;
+  font-size: 1.22rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.prose p,
+.prose li {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.prose ol,
+.prose ul {
+  padding-left: 1.25em;
+}
+
+.prose li {
+  margin-bottom: 0.9em;
+}
+
+.prose strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 /* ---------------------------------------------------------------- footer */
 
 .site-footer {

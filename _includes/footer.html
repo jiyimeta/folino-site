@@ -1,8 +1,9 @@
 {%- comment -%}
-  The home page and the FAQ link to each other, then out to harmolo.com: folino's privacy policy, published
-  there in every one of folino's languages, and Harmolo's own home in the same language.
+  The home page, the FAQ and the privacy policy link to the two of them a visitor is not on - the home page and
+  the FAQ in `home_locale`, the policy in this page's language - and then out to Harmolo's own home, which is
+  published in every language here.
 {%- endcomment -%}
-{%- assign fh = site.data.home[page.locale] -%}
+{%- assign fh = site.data.home[home_locale] -%}
 {%- if page.locale == 'en' -%}
   {%- assign harmolo_home = site.harmolo_url | append: '/' -%}
 {%- else -%}
@@ -16,14 +17,18 @@
     </p>
 
     <p class="site-footer__links">
-      {%- if page.kind == 'faq' %}
-      {%- include locale-url.html code=page.locale kind='home' %}
+      {%- if page.kind != 'home' %}
+      {%- include locale-url.html code=home_locale kind='home' %}
       <a href="{{ locale_url | relative_url }}">folino</a> ·
-      {%- else %}
-      {%- include locale-url.html code=page.locale kind='faq' %}
+      {%- endif %}
+      {%- if page.kind != 'faq' %}
+      {%- include locale-url.html code=home_locale kind='faq' %}
       <a href="{{ locale_url | relative_url }}">{{ fh.nav.faq }}</a> ·
       {%- endif %}
-      <a href="{{ site.harmolo_url }}/folino/privacy-policy/{{ page.locale }}/">{{ t.privacy_link }}</a> ·
+      {%- if page.kind != 'privacy' %}
+      {%- include locale-url.html code=page.locale kind='privacy' %}
+      <a href="{{ locale_url | relative_url }}">{{ t.privacy_link }}</a> ·
+      {%- endif %}
       <a href="{{ harmolo_home }}">Harmolo</a>
     </p>
 

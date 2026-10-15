@@ -55,14 +55,19 @@
 </script>
 {%- endif %}
 
-{%- assign home = site.data.home[page.locale] -%}
+{%- assign home = site.data.home[home_locale] -%}
+{%- assign page_description = home.description -%}
 {%- if page.kind == 'faq' -%}
   {%- assign page_title = home.nav.faq | append: ' | folino' -%}
+{%- elsif page.kind == 'privacy' -%}
+  {%- assign page_title = t.privacy_link | append: ' | folino' -%}
+  {%- comment -%} The home page's description may be in another language here; the title is in this one. {%- endcomment -%}
+  {%- assign page_description = page_title -%}
 {%- else -%}
   {%- assign page_title = home.title -%}
 {%- endif -%}
 <title>{{ page_title }}</title>
-<meta name="description" content="{{ home.description }}">
+<meta name="description" content="{{ page_description }}">
 
 {%- comment -%}
   Safari's Smart App Banner: "Open" when folino is installed, "Get" when it is not. It needs no domain
@@ -81,7 +86,7 @@
 
 <meta property="og:site_name" content="folino">
 <meta property="og:title" content="{{ page_title }}">
-<meta property="og:description" content="{{ home.description }}">
+<meta property="og:description" content="{{ page_description }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta name="twitter:card" content="summary">

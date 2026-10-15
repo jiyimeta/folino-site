@@ -1,10 +1,22 @@
 {%- assign t = site.data.i18n[page.locale] -%}
 {%- assign current_locale = site.data.locales | where: 'code', page.locale | first -%}
 {%- comment -%}
-  Both kinds of page - the home page and the FAQ - are published in every language of _data/locales.yml, so the
-  language switcher and the hreflang alternates list them all.
+  `page_locales` is every language this page is published in, which the language switcher and the hreflang
+  alternates list: all of _data/locales.yml for the privacy policy, folino's own languages for the home page and
+  the FAQ. `home_locale` is the language the header and footer link to the home page and the FAQ in - this
+  page's, or English where those two are not published in it.
 {%- endcomment -%}
-{%- assign page_locales = site.data.locales -%}
+{%- assign folino_locales = site.data.folino.locales -%}
+{%- if page.kind == 'privacy' -%}
+  {%- assign page_locales = site.data.locales -%}
+{%- else -%}
+  {%- assign page_locales = site.data.locales | where_exp: 'l', 'folino_locales contains l.code' -%}
+{%- endif -%}
+{%- if folino_locales contains page.locale -%}
+  {%- assign home_locale = page.locale -%}
+{%- else -%}
+  {%- assign home_locale = 'en' -%}
+{%- endif -%}
 <!DOCTYPE html>
 <html lang="{{ page.locale }}">
   <head>
