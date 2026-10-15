@@ -1,0 +1,14 @@
+# `locales` lists the languages the pages are published in, in switcher order -
+# the five folino itself ships in. A language is added here only once the app
+# ships in it and both pages have been translated (_data/home.yml, _data/faq.yml),
+# and it also needs an entry in _data/locales.yml, i18n.yml, stores.yml and
+# badges.yml, plus its badge files under assets/badges/.
+locales: [en, ja, ko, zh-Hans, zh-Hant]
+
+# The App Store id, for the Smart App Banner Safari shows above every page.
+app_store_id: 6766994527
+
+# Store links, rewritten per locale with _data/stores.yml.
+links:
+  ios: https://apps.apple.com/us/app/folino-score-viewer-player/id6766994527
+  android: https://play.google.com/store/apps/details?id=com.harmolo.folino

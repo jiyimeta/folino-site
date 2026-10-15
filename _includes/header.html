@@ -1,0 +1,27 @@
+{%- comment -%}
+  The wordmark leads home, the anchors jump to the home page's sections, and the download button stays in reach
+  while the page scrolls. Harmolo, who makes folino, is one link away in the footer.
+{%- endcomment -%}
+{%- assign fh = site.data.home[page.locale] -%}
+{%- include locale-url.html code=page.locale kind='home' -%}
+{%- assign home_url = locale_url | relative_url -%}
+{%- include locale-url.html code=page.locale kind='faq' -%}
+{%- assign faq_url = locale_url | relative_url -%}
+<header class="site-header">
+  <div class="fol-container fol-header__inner">
+    <a class="fol-brand" href="{{ home_url }}">
+      <img src="{{ '/images/wordmark.png' | relative_url }}" width="200" height="100" alt="folino">
+    </a>
+
+    <nav class="fol-nav" aria-label="folino">
+      <a href="{{ home_url }}#features">{{ fh.nav.features }}</a>
+      <a href="{{ home_url }}#pricing">{{ fh.nav.pricing }}</a>
+      <a href="{{ faq_url }}">{{ fh.nav.faq }}</a>
+    </nav>
+
+    <div class="fol-header__actions">
+      {%- include lang-switcher.html %}
+      <a class="fol-button" href="{{ home_url }}#download">{{ fh.nav.download }}</a>
+    </div>
+  </div>
+</header>

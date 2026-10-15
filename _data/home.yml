@@ -1,0 +1,629 @@
+# Copy for folino's home page (_layouts/home.html), one entry per locale in
+# _data/folino.yml. The page's structure - which sections exist, in what order,
+# and which screenshots they show - lives in the layout; only words live here.
+#
+# MuseScore is named only where file formats are listed, here and in the FAQ;
+# the page does not talk about MuseScore the app.
+#
+# Headings end without a full stop, even where the App Store screenshots' copy has
+# one; only a hero title may keep the punctuation that separates its verbs. A
+# comma stays only where the sentence reads better with it, never to make a line
+# look like a headline.
+#
+# folino.css keeps Japanese and Chinese headings and the hero lead from breaking
+# inside a word, so they wrap only after punctuation. The lead's lines are long
+# and carry <wbr> where a line may break; headings are kept short instead.
+#
+# The plan limits are deliberately not quoted: the app reads them from Remote
+# Config (TierLimitsCatalog), so any number written here could go stale without a
+# release. Prices vary by storefront for the same reason. Both are left to the
+# app's own plan screen, as the App Store description does.
+
+ja:
+  title: folino (フォリノ) - 楽譜の編集と再生
+  description: 楽譜を読む・聴く・書く、合唱やバンドのための楽譜アプリ。MuseScore・MusicXML・MIDI・PDFの楽譜を開いて、パートごとに音量を調整して聴けます。書き込みも編集も、メンバー全員の楽譜にすぐ届きます。iPhone、iPad、Mac、Androidに対応。
+
+  nav:
+    features: 機能
+    pricing: 料金
+    faq: よくある質問
+    download: ダウンロード
+
+  # `title_groups` is the title in groups of parts. A line breaks between groups
+  # before it breaks between the parts of a group, so a wide screen shows one
+  # line and a narrow one breaks after 楽譜を. `title_separator` goes between
+  # groups and parts: a space here and wherever words are spaced, nothing where
+  # the title runs on (Chinese).
+  #
+  # The subtitle is the App Store screenshots' copy.
+  hero:
+    title_groups:
+      - [楽譜を]
+      - [読む・聴く・書く]
+    title_separator: " "
+    subtitle: バンド全員でひとつの楽譜を
+    lead_lines:
+      - MuseScore・MusicXML・MIDI・PDFの楽譜を<wbr>開けば、<wbr>パートごとに<wbr>音量を調整して<wbr>聴けます。
+      - 書き込みも<wbr>編集も、<wbr>メンバーの楽譜に<wbr>すぐ届きます。
+    notes:
+      - iPhone、iPad、Mac、Android対応。
+      - 閲覧・再生・書き込み・編集は無料です。
+
+  # A locale with `read` gets the page built around the title's verbs - a read
+  # section, a single write section and the export list under sharing - and no
+  # separate formats section.
+  #
+  # The format lists name MuseScore by .mscz alone: .mscx works too, but almost
+  # nobody has one. MIDI and PDF are common enough to need no extension.
+  read:
+    eyebrow: 読む
+    title: 自分のパートを見やすく
+    body: 楽譜の見え方を、自分が読みやすいように変えられます。スマートフォンの小さな画面でも、自分のパートに集中して読めます。
+    points:
+      - 縦スクロール、横スクロール、ページ表示を切り替え
+      - 使わないパートを隠して、自分のパートだけを表示
+      - 電波の届かない会場でも、オフラインで閲覧
+      - プレイリストとタグで、編成や本番ごとに整理
+    import_label: 読み込める形式
+    import:
+      - MuseScore (.mscz)
+      - MusicXML (.musicxml, .mxl)
+      - MIDI
+      - PDF
+      - folino (.folino)
+
+  practice:
+    eyebrow: 聴く
+    title: 聴きたいパートを鳴らす
+    body: パートごとに音量を変えたり、ミュートやソロにしたり、楽器を差し替えたりできます。パートごとの練習音源を1つずつ書き出して配る必要は、もうありません。
+    points:
+      - A-Bリピートで、難しいフレーズを繰り返し練習
+      - メトロノーム、カウントイン、テンポ変更、移調
+      - バックグラウンド再生とピクチャインピクチャ
+
+  # One section for writing, marks and notes together. A locale without `write`
+  # gets the older pair of sections from `annotate` and `edit`.
+  write:
+    eyebrow: 書く
+    title: メモも音符も書ける
+    body: 楽譜を一から書き、演奏の指示や練習メモを書き込むこともできます。書いたメモは、表示を切り替えても音符の位置についてきます。
+    points:
+      - ペン（Apple Pencilなど）や指でメモを書き込み
+      - 音符の入力と削除、和音やタイ、連符、ドラム譜の入力
+      - 編成と調、拍子を選んで、新しい楽譜を作成
+      - Macでは、キーボードで音符を入力し、ショートカットも自由に設定
+
+  sync:
+    eyebrow: 共有
+    title: 書き込みも修正も、メンバー全員の楽譜に
+    body: サインインすれば、楽譜は書き込みや編集も含めて、自分のほかの端末やグループのメンバーにすぐ届きます。同期と共有グループ以外の機能は、サインインしなくても使えます。
+    points:
+      - 練習の指示を書き込んで、メンバー全員に共有
+      - 自分だけのメモは非公開のまま保存
+      - folinoを使っていない人には、書き込み入りのPDFやMuseScore形式で共有
+      - .folinoファイルで、書き込みや設定ごと楽譜を受け渡し
+    export_label: 書き出せる形式
+    export:
+      - MuseScore (.mscz)
+      - PDF
+      - MIDI
+      - オーディオ (.m4a)
+      - folino (.folino)
+
+  pricing:
+    eyebrow: 料金
+    title: 楽譜を使う機能はすべて無料
+    free_name: 無料
+    free_points:
+      - 楽譜の閲覧と再生
+      - 書き込み
+      - 音符の編集と楽譜の作成
+      - 取り込みと書き出し
+      - 招待されたグループへの参加
+      - 同期と共有グループのお試し
+    paid_body: 同期する楽譜の数と、作れるグループの数や人数が増えます。月額と年額の自動更新サブスクリプションです。
+    paid_note: プランが必要になるのはグループを作る側だけです。招待されたメンバーは、プランなしで参加して、楽譜を開いたり書き込んだりできます。
+    # One sentence per line on the page.
+    notes:
+      - プランはfolinoアカウントに紐づくので、購入したプランはサインインしたすべての端末で使えます。
+      - それぞれの上限と価格は、アプリのプランの画面で確認できます。
+
+  faq:
+    title: よくある質問
+    more: すべての質問を見る
+
+  download:
+    title: folinoを無料でダウンロード
+    note: iPhone、iPad、MacはApp Storeから、AndroidはGoogle Playから。
+
+  # The FAQ page's own words; its questions are in folino_faq.yml.
+  faq_page:
+    lead: folinoの使い方、料金、データの扱いについての質問と回答です。
+    contact_title: 解決しないときは
+    contact_body: |
+      [contact@harmolo.com](mailto:contact@harmolo.com)までメールでお問い合わせください。アプリの設定にある「フィードバックを送る」からも送れます。
+
+  # Alt text for each screenshot, keyed by the image name in folino/images/<locale>/.
+  shots:
+    parts-ipad: 表示するパートを選んでいる画面
+    reader-ipad: iPadで合唱曲の楽譜を開いている画面
+    reader-iphone: iPhoneで同じ楽譜を開いている画面
+    playback-ipad: 再生の設定を開いている画面
+    annotation-ipad: 楽譜に手書きで書き込んでいる画面
+    editing-ipad: 音符を選んで編集している画面
+    editing-iphone: iPhoneで音符を選んで編集している画面
+    score-mac: Macで楽譜をページ表示している画面
+    group-iphone: 共有グループのメンバーと楽譜の画面
+    library-ipad: 取り込んだ楽譜を並べたライブラリの画面
+
+en:
+  title: folino - Score Editor & Player
+  description: Read the score. Hear it. Rewrite it. Open MuseScore, MusicXML, MIDI, or PDF scores and set the volume of each part as you listen; marks and edits reach the whole band right away. For iPhone, iPad, Mac, and Android.
+
+  nav:
+    features: Features
+    pricing: Pricing
+    faq: FAQ
+    download: Download
+
+  hero:
+    title_groups:
+      - [Read the score.]
+      - [Hear it., Rewrite it.]
+    title_separator: " "
+    subtitle: One score for the whole band
+    lead_lines:
+      - Open MuseScore, MusicXML, MIDI, or PDF scores and set the volume of each part as you listen.
+      - Marks and edits reach every member's score right away.
+    notes:
+      - For iPhone, iPad, Mac, and Android.
+      - Reading, playback, annotation, and editing are free.
+
+  practice:
+    eyebrow: Part practice
+    title: Play only the parts you want to hear
+    body: Change the volume of each part, mute it or solo it, or give it another instrument. No more exporting a separate rehearsal track for every part.
+    points:
+      - A-B repeat for the phrases that need it
+      - Metronome, count-in, tempo, and transposition
+      - Hide the parts you don't need and focus on yours
+      - Background playback and Picture in Picture
+
+  annotate:
+    eyebrow: Annotation
+    title: Write your notes on the score
+    body: Write fingerings and rehearsal notes straight onto the score with Apple Pencil or your finger. Change the zoom, or switch between vertical scrolling and pages, and the music reflows; your marks stay with the notes they belong to.
+    points:
+      - Marks save with the score automatically
+      - Share the score as a PDF with your marks on it
+      - On a Mac, mark up with a mouse or trackpad
+
+  edit:
+    eyebrow: Editing and creating
+    title: Fix a note on the spot
+    body: When an imported score has a mistake, fix it without going back to another app. Enter and delete notes, change pitches, and write chords, ties, tuplets, and rehearsal marks, drum notation included. You can also start a new score from scratch.
+    mac_title: On a Mac, enter notes from the keyboard
+    mac_body: Type a letter for the pitch and a number for the duration. Every editing command can take a keyboard shortcut, and Settings > Shortcuts lists them all, ready to search and change.
+
+  sync:
+    eyebrow: Sync and shared groups
+    title: Every mark and fix on every member's score
+    body: Sign in, and your scores sync across your devices, annotations and edits included. Create a shared group, and your choir or band works from the same scores, with every mark and note fix showing up on everyone's copy right away.
+    points:
+      - Fix a score on your Mac, then mark it up on your iPad
+      - Write a rehearsal note once, for every member
+      - Keep private notes that only you can see
+    note: Everything except sync and shared groups works without signing in.
+
+  formats:
+    eyebrow: Import and export
+    title: Open the scores you already have
+    body: On iPhone, iPad, and Mac, even a scanned PDF is read into real notation when you import it, so playback, transposition, and showing or hiding parts all work as they do with any other format. You can still switch back to the original PDF.
+    import_label: Import
+    import:
+      - MuseScore (.mscz)
+      - MusicXML (.musicxml, .mxl)
+      - MIDI
+      - PDF
+    export_label: Export
+    export:
+      - MuseScore
+      - PDF
+      - MIDI
+      - Audio (.m4a)
+      - .folino
+    folino_note: A .folino file carries the score together with its marks and settings, ready to edit on another device.
+
+  pricing:
+    eyebrow: Pricing
+    title: Everything you do with a score is free
+    free_name: Free
+    free_points:
+      - Reading and playback
+      - Annotation
+      - Note editing and new scores
+      - Import and export
+      - Joining groups you're invited to
+      - Trying out sync and shared groups
+    paid_body: Sync more scores, and run more groups with more members in them. Monthly or yearly auto-renewing subscriptions.
+    paid_note: Only whoever creates a group needs a plan. Invited members join without one, and can open and mark up the scores.
+    notes:
+      - Plans belong to your folino account, so a plan you buy works on every device you sign in to.
+      - Each plan's limits and price are shown on the plan screen in the app.
+
+  faq:
+    title: Frequently asked questions
+    more: See all questions
+
+  download:
+    title: Get folino for free
+    note: iPhone, iPad, and Mac on the App Store; Android on Google Play.
+
+  faq_page:
+    lead: Questions and answers about using folino, what it costs, and how it handles your data.
+    contact_title: Still need help?
+    contact_body: |
+      Email us at [contact@harmolo.com](mailto:contact@harmolo.com). You can also use Send Feedback in the app's Settings.
+
+  shots:
+    reader-ipad: A choral score open on iPad
+    reader-iphone: The same score open on iPhone
+    playback-ipad: Playback settings open over a score
+    annotation-ipad: Handwritten marks on a score
+    editing-ipad: A note selected for editing
+    score-mac: A score shown page by page on a Mac
+    group-iphone: A shared group's members and scores
+    library-ipad: The library with imported scores
+
+ko:
+  title: folino - 악보 편집과 재생
+  description: 악보를 읽다. 듣다. 고쳐 쓰다. MuseScore·MusicXML·MIDI·PDF 악보를 열어 파트별로 음량을 조절하며 들을 수 있고, 필기도 편집도 밴드 모두의 악보에 바로 전해집니다. iPhone, iPad, Mac, Android 지원.
+
+  nav:
+    features: 기능
+    pricing: 요금
+    faq: 자주 묻는 질문
+    download: 다운로드
+
+  hero:
+    title_groups:
+      - ["악보를,"]
+      - [읽다. 듣다., 고쳐 쓰다.]
+    title_separator: " "
+    subtitle: 밴드 모두가 하나의 악보로
+    lead_lines:
+      - MuseScore·MusicXML·MIDI·PDF 악보를 열면 파트별로 음량을 조절하며 들을 수 있습니다.
+      - 필기도 편집도 멤버의 악보에 바로 전해집니다.
+    notes:
+      - iPhone, iPad, Mac, Android 지원.
+      - 보기·재생·필기·편집은 무료입니다.
+
+  practice:
+    eyebrow: 파트 연습
+    title: 듣고 싶은 파트만 재생
+    body: 파트별로 음량을 바꾸거나, 음소거·솔로로 하거나, 악기를 바꿀 수 있습니다. 파트별 연습 음원을 하나씩 내보내 나눠 줄 필요가 더 이상 없습니다.
+    points:
+      - A-B 반복으로 어려운 프레이즈를 반복 연습
+      - 메트로놈, 카운트인, 템포 조절, 조옮김
+      - 필요 없는 파트는 숨기고 내 파트에 집중
+      - 백그라운드 재생과 PIP(픽처 인 픽처)
+
+  annotate:
+    eyebrow: 필기
+    title: 메모를 악보에 쓰다
+    body: Apple Pencil이나 손가락으로 운지와 연습 메모를 악보에 직접 쓸 수 있습니다. 확대 배율을 바꾸거나 세로 스크롤과 페이지 표시를 전환해 악보 배치가 달라져도, 쓴 표시는 음표를 따라갑니다.
+    points:
+      - 필기는 악보와 함께 자동 저장
+      - 필기를 넣은 채로 PDF로 만들어 공유
+      - Mac에서는 마우스나 트랙패드로 필기
+
+  edit:
+    eyebrow: 편집·작성
+    title: 음표를 그 자리에서 고치다
+    body: 불러온 악보에 오류가 있어도 다른 앱으로 돌아가지 않고 고칠 수 있습니다. 음표 입력과 삭제, 음높이 변경, 화음, 붙임줄, 잇단음표, 리허설 마크를 지원하며 드럼 악보도 입력할 수 있습니다. 새 악보를 처음부터 만들 수도 있습니다.
+    mac_title: Mac에서는 키보드만으로 음표 입력
+    mac_body: 알파벳으로 음이름을, 숫자로 음가를 입력합니다. 모든 편집 명령에 키보드 단축키를 지정할 수 있고, '설정' > '단축키' 목록에서 검색해 바꿀 수 있습니다.
+
+  sync:
+    eyebrow: 동기화와 공유 그룹
+    title: 필기도 수정도 모든 멤버의 악보에
+    body: 로그인하면 악보가 필기와 편집 내용까지 포함해 내 다른 기기와 동기화됩니다. 공유 그룹을 만들면 합창단이나 밴드 멤버와 같은 악보를 쓸 수 있고, 필기와 음표 수정은 바로 모두의 악보에 반영됩니다.
+    points:
+      - Mac에서 고친 악보를 iPad에서 열어 필기
+      - 연습 지시를 한 번 써서 모든 멤버에게 전달
+      - 나만의 메모는 공유하지 않고 남겨 두기
+    note: 동기화와 공유 그룹을 제외한 모든 기능은 로그인하지 않아도 사용할 수 있습니다.
+
+  formats:
+    eyebrow: 불러오기와 내보내기
+    title: 가지고 있는 악보를 그대로 열기
+    body: iPhone, iPad, Mac에서는 스캔한 PDF 악보도 불러올 때 분석해 악보 데이터로 변환합니다. 재생과 조옮김, 파트 표시 전환까지 다른 형식과 똑같이 사용할 수 있고, 원본 PDF로 전환할 수도 있습니다.
+    import_label: 불러오기
+    import:
+      - MuseScore (.mscz)
+      - MusicXML (.musicxml, .mxl)
+      - MIDI
+      - PDF
+    export_label: 내보내기
+    export:
+      - MuseScore
+      - PDF
+      - MIDI
+      - 오디오 (.m4a)
+      - .folino
+    folino_note: .folino 파일이라면 악보와 필기, 설정을 한데 묶어 편집할 수 있는 상태 그대로 다른 기기로 옮길 수 있습니다.
+
+  pricing:
+    eyebrow: 요금
+    title: 악보를 다루는 기능은 모두 무료
+    free_name: 무료
+    free_points:
+      - 악보 보기와 재생
+      - 필기
+      - 음표 편집과 악보 작성
+      - 불러오기와 내보내기
+      - 초대받은 그룹에 참여
+      - 동기화와 공유 그룹 체험
+    paid_body: 동기화할 수 있는 악보 수와, 만들 수 있는 그룹 수·인원이 늘어납니다. 월간·연간 자동 갱신 구독입니다.
+    paid_note: 요금제가 필요한 것은 그룹을 만드는 쪽뿐입니다. 초대받은 멤버는 요금제 없이 참여해 악보를 열고 필기할 수 있습니다.
+    notes:
+      - 요금제는 folino 계정에 연결되므로, 구매한 요금제는 로그인한 모든 기기에서 사용할 수 있습니다.
+      - 요금제별 한도와 가격은 앱의 요금제 화면에서 확인할 수 있습니다.
+
+  faq:
+    title: 자주 묻는 질문
+    more: 모든 질문 보기
+
+  download:
+    title: folino 무료 다운로드
+    note: iPhone, iPad, Mac은 App Store에서, Android는 Google Play에서.
+
+  faq_page:
+    lead: folino의 사용법, 요금, 데이터 처리에 관한 질문과 답변입니다.
+    contact_title: 해결되지 않을 때는
+    contact_body: |
+      [contact@harmolo.com](mailto:contact@harmolo.com)으로 메일을 보내 주세요. 앱 설정의 '피드백 보내기'에서도 보낼 수 있습니다.
+
+  shots:
+    reader-ipad: iPad에서 합창곡 악보를 연 화면
+    reader-iphone: iPhone에서 같은 악보를 연 화면
+    playback-ipad: 재생 설정을 연 화면
+    annotation-ipad: 악보에 손으로 필기한 화면
+    editing-ipad: 음표를 선택해 편집하는 화면
+    score-mac: Mac에서 악보를 페이지로 표시한 화면
+    group-iphone: 공유 그룹의 멤버와 악보 화면
+    library-ipad: 불러온 악보가 늘어선 라이브러리 화면
+
+zh-Hans:
+  title: folino - 乐谱编辑与播放
+  description: 读谱。听谱。改谱。打开 MuseScore、MusicXML、MIDI 或 PDF 乐谱，按声部调整音量来听；批注和编辑会立即送达全团的乐谱。支持 iPhone、iPad、Mac 和 Android。
+
+  nav:
+    features: 功能
+    pricing: 价格
+    faq: 常见问题
+    download: 下载
+
+  hero:
+    title_groups:
+      - [读谱。听谱。改谱。]
+    subtitle: 全团共用一份乐谱
+    lead_lines:
+      - 打开 MuseScore、MusicXML、MIDI 或 PDF 乐谱，<wbr>就能按声部<wbr>调整音量来听。
+      - 批注和编辑<wbr>都会立即送达<wbr>每位成员的乐谱。
+    notes:
+      - 支持 iPhone、iPad、Mac、Android。
+      - 阅读、播放、批注和编辑均免费。
+
+  practice:
+    eyebrow: 分声部练习
+    title: 只播放想听的声部
+    body: 可以按声部调整音量、静音或独奏，也可以更换乐器。不必再为每个声部逐一导出练习音源分发给大家。
+    points:
+      - 用 A-B 循环反复练习难点乐句
+      - 节拍器、预备拍、速度调节、移调
+      - 隐藏不需要的声部，专注于自己的声部
+      - 后台播放与画中画
+
+  annotate:
+    eyebrow: 批注
+    title: 把笔记写在乐谱上
+    body: 用 Apple Pencil 或手指，把指法和练习笔记直接写在乐谱上。即使调整缩放、在纵向滚动和翻页显示之间切换让乐谱重新排版，写下的标记也会跟着音符走。
+    points:
+      - 批注随乐谱自动保存
+      - 带着批注导出 PDF 分享
+      - 在 Mac 上用鼠标或触控板书写
+
+  edit:
+    eyebrow: 编辑与创建
+    title: 音符当场就改
+    body: 导入的乐谱有错误时，无需回到其他 App 就能修改。支持音符的输入与删除、音高更改，和弦、连音线、连音符和排练记号的输入，还可以输入鼓谱。也可以从零开始创建新乐谱。
+    mac_title: 在 Mac 上只用键盘输入音符
+    mac_body: 用字母输入音名，用数字输入时值。所有编辑命令都可以设置键盘快捷键，并可在“设置”>“快捷键”列表中搜索和修改。
+
+  sync:
+    eyebrow: 同步与共享群组
+    title: 批注和修改，送达每位成员的乐谱
+    body: 登录后，乐谱连同批注和编辑内容会与你的其他设备同步。创建共享群组后，合唱团或乐队成员可以使用同一份乐谱，批注和音符修改会立即反映到每个人的乐谱上。
+    points:
+      - Mac 上改好的乐谱，在 iPad 上加批注
+      - 写下一条排练提示，送达每位成员
+      - 只属于自己的笔记，可以不共享
+    note: 除同步和共享群组外，所有功能无需登录即可使用。
+
+  formats:
+    eyebrow: 导入与导出
+    title: 手头的乐谱直接打开
+    body: 在 iPhone、iPad 和 Mac 上，扫描的 PDF 乐谱也会在导入时解析并转换为乐谱数据。播放、移调、声部显示切换都能像其他格式一样使用，也可以切换回原始 PDF。
+    import_label: 导入
+    import:
+      - MuseScore (.mscz)
+      - MusicXML (.musicxml, .mxl)
+      - MIDI
+      - PDF
+    export_label: 导出
+    export:
+      - MuseScore
+      - PDF
+      - MIDI
+      - 音频 (.m4a)
+      - .folino
+    folino_note: 使用 .folino 文件，可以把乐谱、批注和设置打包，以可编辑的状态交给另一台设备。
+
+  pricing:
+    eyebrow: 价格
+    title: 乐谱相关功能全部免费
+    free_name: 免费
+    free_points:
+      - 阅读与播放乐谱
+      - 批注
+      - 音符编辑与新建乐谱
+      - 导入与导出
+      - 加入受邀的群组
+      - 试用同步与共享群组
+    paid_body: 可同步的乐谱数量，以及可创建的群组数量和人数都会增加。按月或按年自动续期订阅。
+    paid_note: 只有创建群组的一方需要订阅方案。受邀成员无需方案即可加入，打开乐谱并添加批注。
+    notes:
+      - 方案与你的 folino 账户绑定，因此购买的方案可在你登录的所有设备上使用。
+      - 各方案的上限和价格可在 App 的方案页面中查看。
+
+  faq:
+    title: 常见问题
+    more: 查看全部问题
+
+  download:
+    title: 免费下载 folino
+    note: iPhone、iPad 和 Mac 请前往 App Store，Android 请前往 Google Play。
+
+  faq_page:
+    lead: 关于 folino 的使用方法、价格和数据处理的问题与解答。
+    contact_title: 仍未解决？
+    contact_body: |
+      请发送邮件至 [contact@harmolo.com](mailto:contact@harmolo.com)。也可以通过 App 设置中的“发送反馈”联系我们。
+
+  shots:
+    reader-ipad: 在 iPad 上打开合唱乐谱的画面
+    reader-iphone: 在 iPhone 上打开同一份乐谱的画面
+    playback-ipad: 打开播放设置的画面
+    annotation-ipad: 在乐谱上手写批注的画面
+    editing-ipad: 选中音符进行编辑的画面
+    score-mac: 在 Mac 上翻页显示乐谱的画面
+    group-iphone: 共享群组的成员与乐谱画面
+    library-ipad: 排列着已导入乐谱的资料库画面
+
+zh-Hant:
+  title: folino - 樂譜編輯與播放
+  description: 讀譜。聽譜。改譜。打開 MuseScore、MusicXML、MIDI 或 PDF 樂譜，依聲部調整音量來聽；註記與編輯會立即送到全團的樂譜。支援 iPhone、iPad、Mac 與 Android。
+
+  nav:
+    features: 功能
+    pricing: 價格
+    faq: 常見問題
+    download: 下載
+
+  hero:
+    title_groups:
+      - [讀譜。聽譜。改譜。]
+    subtitle: 全團共用一份樂譜
+    lead_lines:
+      - 打開 MuseScore、MusicXML、MIDI 或 PDF 樂譜，<wbr>就能依聲部<wbr>調整音量來聽。
+      - 註記與編輯<wbr>都會立即送到<wbr>每位成員的樂譜。
+    notes:
+      - 支援 iPhone、iPad、Mac、Android。
+      - 閱讀、播放、註記與編輯皆免費。
+
+  practice:
+    eyebrow: 分聲部練習
+    title: 只播放想聽的聲部
+    body: 可以依聲部調整音量、靜音或獨奏，也可以更換樂器。不必再為每個聲部逐一匯出練習音源分給大家。
+    points:
+      - 用 A-B 循環反覆練習困難的樂句
+      - 節拍器、預備拍、速度調整、移調
+      - 隱藏不需要的聲部，專注於自己的聲部
+      - 背景播放與子母畫面
+
+  annotate:
+    eyebrow: 註記
+    title: 把筆記寫在樂譜上
+    body: 用 Apple Pencil 或手指，把指法與練習筆記直接寫在樂譜上。即使調整縮放、在垂直捲動與翻頁顯示之間切換讓樂譜重新排版，寫下的記號也會跟著音符走。
+    points:
+      - 註記隨樂譜自動儲存
+      - 帶著註記匯出 PDF 分享
+      - 在 Mac 上用滑鼠或觸控式軌跡板書寫
+
+  edit:
+    eyebrow: 編輯與建立
+    title: 音符當場就改
+    body: 匯入的樂譜有錯誤時，不必回到其他 App 就能修改。支援音符的輸入與刪除、音高變更，和弦、連結線、連音符與排練記號的輸入，還能輸入鼓譜。也可以從頭建立新樂譜。
+    mac_title: 在 Mac 上只用鍵盤輸入音符
+    mac_body: 用字母輸入音名，用數字輸入時值。所有編輯指令都可以設定鍵盤快速鍵，並可在「設定」>「快速鍵」列表中搜尋與修改。
+
+  sync:
+    eyebrow: 同步與共享群組
+    title: 註記與修正，送到每位成員的樂譜
+    body: 登入後，樂譜連同註記與編輯內容會與你的其他裝置同步。建立共享群組後，合唱團或樂團成員可以使用同一份樂譜，註記與音符修正會立即反映到每個人的樂譜上。
+    points:
+      - Mac 上改好的樂譜，在 iPad 上加註記
+      - 寫下一條排練提示，送到每位成員
+      - 只屬於自己的筆記，可以不共享
+    note: 除了同步與共享群組，所有功能不必登入也能使用。
+
+  formats:
+    eyebrow: 匯入與匯出
+    title: 手邊的樂譜直接打開
+    body: 在 iPhone、iPad 與 Mac 上，掃描的 PDF 樂譜也會在匯入時解析並轉換為樂譜資料。播放、移調、聲部顯示切換都能像其他格式一樣使用，也可以切換回原始 PDF。
+    import_label: 匯入
+    import:
+      - MuseScore (.mscz)
+      - MusicXML (.musicxml, .mxl)
+      - MIDI
+      - PDF
+    export_label: 匯出
+    export:
+      - MuseScore
+      - PDF
+      - MIDI
+      - 音訊 (.m4a)
+      - .folino
+    folino_note: 使用 .folino 檔案，可以把樂譜、註記與設定打包，以可編輯的狀態交給另一台裝置。
+
+  pricing:
+    eyebrow: 價格
+    title: 樂譜相關功能全部免費
+    free_name: 免費
+    free_points:
+      - 閱讀與播放樂譜
+      - 註記
+      - 音符編輯與建立新樂譜
+      - 匯入與匯出
+      - 加入受邀的群組
+      - 試用同步與共享群組
+    paid_body: 可同步的樂譜數量，以及可建立的群組數量與人數都會增加。按月或按年自動續訂。
+    paid_note: 只有建立群組的一方需要訂閱方案。受邀成員不需方案即可加入，開啟樂譜並加上註記。
+    notes:
+      - 方案與你的 folino 帳戶綁定，因此購買的方案可在你登入的所有裝置上使用。
+      - 各方案的上限與價格可在 App 的方案頁面查看。
+
+  faq:
+    title: 常見問題
+    more: 查看所有問題
+
+  download:
+    title: 免費下載 folino
+    note: iPhone、iPad 與 Mac 請前往 App Store，Android 請前往 Google Play。
+
+  faq_page:
+    lead: 關於 folino 的使用方式、價格與資料處理的問題與解答。
+    contact_title: 仍未解決？
+    contact_body: |
+      請寄信至 [contact@harmolo.com](mailto:contact@harmolo.com)。也可以透過 App 設定中的「傳送回饋」聯絡我們。
+
+  shots:
+    reader-ipad: 在 iPad 上開啟合唱樂譜的畫面
+    reader-iphone: 在 iPhone 上開啟同一份樂譜的畫面
+    playback-ipad: 開啟播放設定的畫面
+    annotation-ipad: 在樂譜上手寫註記的畫面
+    editing-ipad: 選取音符進行編輯的畫面
+    score-mac: 在 Mac 上翻頁顯示樂譜的畫面
+    group-iphone: 共享群組的成員與樂譜畫面
+    library-ipad: 排列著已匯入樂譜的資料庫畫面

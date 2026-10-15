@@ -1,0 +1,38 @@
+---
+layout: base
+---
+{%- comment -%}
+  folino's FAQ: every entry of _data/faq.yml in this locale, grouped by category, each under its fixed
+  `id` so the app and the home page can link straight to one answer. Answers are always open - a page that
+  exists to be linked into should show the answer it was linked to without a click.
+{%- endcomment -%}
+{%- assign fh = site.data.home[page.locale] -%}
+{%- assign faq = site.data.faq -%}
+
+<article class="fol-faq-page">
+  <div class="fol-container fol-faq">
+    <h1 class="fol-faq-page__title">{{ fh.faq.title }}</h1>
+    <p class="fol-faq-page__lead">{{ fh.faq_page.lead }}</p>
+
+    {%- for category in faq.categories %}
+    {%- assign entries = faq.entries | where: 'category', category.id %}
+    <h2 class="fol-faq-page__category">{{ category[page.locale] }}</h2>
+    <div class="fol-faq__list">
+      {%- for entry in entries %}
+      {%- assign text = entry[page.locale] %}
+      {%- if text %}
+      <section class="fol-faq-entry" id="{{ entry.id }}">
+        <h3 class="fol-faq-entry__q">{{ text.q }}</h3>
+        <div class="fol-faq__answer">{{ text.a | markdownify }}</div>
+      </section>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+    {%- endfor %}
+
+    <aside class="fol-contact">
+      <h2 class="fol-contact__title">{{ fh.faq_page.contact_title }}</h2>
+      <div class="fol-contact__body">{{ fh.faq_page.contact_body | markdownify }}</div>
+    </aside>
+  </div>
+</article>

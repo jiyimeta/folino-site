@@ -1,0 +1,13 @@
+{%- comment -%}
+  Sets `locale_url` to a page in the language `include.code`: the page of kind `include.kind`, or of this page's
+  kind when none is given. The home page is / in English - the store listings' marketing URL needs no language
+  in it - and /<code>/ otherwise; the FAQ is /faq/<code>/ in every language, English included.
+{%- endcomment -%}
+{%- assign locale_kind = include.kind | default: page.kind -%}
+{%- if locale_kind == 'faq' -%}
+  {%- assign locale_url = '/faq/' | append: include.code | append: '/' -%}
+{%- elsif include.code == 'en' -%}
+  {%- assign locale_url = '/' -%}
+{%- else -%}
+  {%- assign locale_url = '/' | append: include.code | append: '/' -%}
+{%- endif -%}

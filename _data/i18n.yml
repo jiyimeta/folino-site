@@ -1,0 +1,42 @@
+# The site's own UI strings, keyed by locale code (see _data/locales.yml). The
+# page copy is in home.yml and faq.yml. Every locale must define the same keys.
+
+en:
+  language_label: Language
+  email_label: Email
+  privacy_link: Privacy policy
+  stores:
+    ios: App Store
+    android: Google Play
+
+ja:
+  language_label: 言語
+  email_label: メールアドレス
+  privacy_link: プライバシーポリシー
+  stores:
+    ios: App Store
+    android: Google Play
+
+ko:
+  language_label: 언어
+  email_label: 이메일
+  privacy_link: 개인정보 처리방침
+  stores:
+    ios: App Store
+    android: Google Play
+
+zh-Hans:
+  language_label: 语言
+  email_label: 电子邮箱
+  privacy_link: 隐私政策
+  stores:
+    ios: App Store
+    android: Google Play
+
+zh-Hant:
+  language_label: 語言
+  email_label: 電子郵件
+  privacy_link: 隱私政策
+  stores:
+    ios: App Store
+    android: Google Play

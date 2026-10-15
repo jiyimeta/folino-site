@@ -1,0 +1,18 @@
+# Per-locale store routing for the App Store and Google Play badges.
+#
+# `folino.yml` holds one canonical URL per store - a `/us/` App Store URL and a
+# bare Play URL - and `_includes/badges.html` rewrites it with the values below
+# so each translated page links to a store page in its own language.
+#
+# `apple` replaces the country segment of the App Store URL. The App Store picks
+# the page language from the storefront, not from a language parameter, so the
+# country code is what does the localizing.
+#
+# `play` is the Google Play `hl` value. Play treats it as a pure language
+# switch, independent of the storefront country.
+
+en:      { apple: us, play: en }
+ja:      { apple: jp, play: ja }
+ko:      { apple: kr, play: ko }
+zh-Hans: { apple: cn, play: zh-CN }
+zh-Hant: { apple: tw, play: zh-TW }

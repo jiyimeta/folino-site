@@ -1,0 +1,26 @@
+{%- comment -%}
+  folino's two store badges, pointed at this page's language: `_data/stores.yml` swaps the App Store
+  country and adds Google Play's `hl`.
+{%- endcomment -%}
+{%- assign badge = site.data.badges[page.locale] -%}
+{%- assign store = site.data.stores[page.locale] -%}
+{%- capture storefront -%}/{{ store.apple }}/app/{%- endcapture -%}
+{%- assign ios_url = site.data.folino.links.ios | replace: '/us/app/', storefront -%}
+{%- if store.apple_lang -%}
+{%- assign ios_url = ios_url | append: '?l=' | append: store.apple_lang -%}
+{%- endif -%}
+{%- assign android_url = site.data.folino.links.android | append: '&hl=' | append: store.play -%}
+<ul class="fol-badges">
+  <li>
+    <a class="store-badge" href="{{ ios_url }}">
+      <img src="{{ '/assets/badges/app-store-' | append: page.locale | append: '.svg' | relative_url }}"
+           width="{{ badge.ios.width }}" height="{{ badge.ios.height }}" alt="{{ t.stores.ios }}">
+    </a>
+  </li>
+  <li>
+    <a class="store-badge" href="{{ android_url }}">
+      <img src="{{ '/assets/badges/google-play-' | append: page.locale | append: '.png' | relative_url }}"
+           width="{{ badge.android.width }}" height="{{ badge.android.height }}" alt="{{ t.stores.android }}">
+    </a>
+  </li>
+</ul>

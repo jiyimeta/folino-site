@@ -1,0 +1,19 @@
+title: folino
+email: contact@harmolo.com
+url: https://folino.app
+
+# Harmolo, who makes folino, keeps its own site. folino's privacy policy lives there rather than here: the App
+# Store, Google Play and the app itself all link to it on harmolo.com.
+harmolo_url: https://harmolo.com
+
+# Overriding `exclude` replaces Jekyll's defaults, so the usual entries are
+# repeated here alongside the repo's own README.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md

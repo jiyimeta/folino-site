@@ -1,0 +1,504 @@
+# folino's FAQ: the full list on /faq/<locale>/ (_layouts/faq.html),
+# and the entries marked `featured` on the home page as well. One list feeds both,
+# so a question is written - and translated - once.
+#
+# `id` is the question's anchor on the FAQ page (/faq/ja/#sign-in). The app
+# links to these, so an id is a published URL: never rename or reuse one, and
+# never derive it from the question text, which changes with translation and
+# rewording. An entry without text for a locale is skipped on that locale's pages.
+#
+# Answers are Markdown. Links inside them point at the same locale's pages, and
+# the names of app commands and settings are quoted the way that locale's app
+# spells them.
+
+categories:
+  - id: basics
+    en: Getting started
+    ja: はじめに
+    ko: 시작하기
+    zh-Hans: 入门
+    zh-Hant: 入門
+  - id: files
+    en: Score files
+    ja: 楽譜ファイル
+    ko: 악보 파일
+    zh-Hans: 乐谱文件
+    zh-Hant: 樂譜檔案
+  - id: practice
+    en: Practice and editing
+    ja: 練習と編集
+    ko: 연습과 편집
+    zh-Hans: 练习与编辑
+    zh-Hant: 練習與編輯
+  - id: sharing
+    en: Sync and shared groups
+    ja: 同期と共有グループ
+    ko: 동기화와 공유 그룹
+    zh-Hans: 同步与共享群组
+    zh-Hant: 同步與共享群組
+  - id: account
+    en: Pricing and data
+    ja: 料金とデータ
+    ko: 요금과 데이터
+    zh-Hans: 价格与数据
+    zh-Hant: 價格與資料
+
+entries:
+  - id: sign-in
+    category: basics
+    featured: true
+    en:
+      q: Do I need to sign in?
+      a: |
+        No. Reading, playback, annotation, editing, import, and export all work without signing in. You only need to sign in to sync with your other devices and to use shared groups.
+
+        You can sign in with Apple, with Google, or with a sign-in link sent to your email address.
+    ja:
+      q: サインインしないと使えませんか？
+      a: |
+        いいえ。楽譜の閲覧、再生、書き込み、編集、取り込みと書き出しは、サインインしなくても使えます。サインインが必要なのは、自分のほかの端末との同期と、共有グループだけです。
+
+        サインインには、Appleでサインイン、Googleでサインイン、メールアドレスに届くサインイン用リンクのいずれかを使えます。
+    ko:
+      q: 로그인하지 않으면 사용할 수 없나요?
+      a: |
+        아니요. 악보 보기, 재생, 필기, 편집, 불러오기와 내보내기는 로그인하지 않아도 사용할 수 있습니다. 로그인이 필요한 것은 내 다른 기기와의 동기화와 공유 그룹뿐입니다.
+
+        Apple로 로그인, Google로 로그인, 또는 이메일 주소로 받는 로그인 링크 중 하나로 로그인할 수 있습니다.
+    zh-Hans:
+      q: 不登录就不能使用吗？
+      a: |
+        不是。阅读、播放、批注、编辑以及导入和导出，都无需登录即可使用。只有与你的其他设备同步，以及使用共享群组时才需要登录。
+
+        可以通过“通过 Apple 登录”“通过 Google 登录”，或发送到你邮箱的登录链接进行登录。
+    zh-Hant:
+      q: 不登入就不能使用嗎？
+      a: |
+        不是。閱讀、播放、註記、編輯以及匯入與匯出，都不必登入就能使用。只有與你的其他裝置同步，以及使用共享群組時才需要登入。
+
+        可以透過「使用 Apple 登入」「使用 Google 登入」，或寄到你電子郵件信箱的登入連結進行登入。
+
+  - id: price
+    category: basics
+    featured: true
+    en:
+      q: Does folino cost anything?
+      a: |
+        Reading, playback, annotation, and editing are free, and you can try sync and shared groups for free, too.
+
+        To sync more scores, or to have more groups with more members in them, subscribe to folino plus or folino pro, available as monthly or yearly auto-renewing subscriptions. Each plan's limits and price are shown on the plan screen in the app.
+
+        Only whoever creates a group needs a plan. Invited members join without one, and can open and mark up the scores.
+    ja:
+      q: 料金はかかりますか？
+      a: |
+        閲覧、再生、書き込み、編集は無料です。同期と共有グループも無料で試せます。
+
+        同期する楽譜の数や、グループの数と人数を増やしたいときは、月額または年額の自動更新サブスクリプション「folino plus」「folino pro」をご利用ください。それぞれの上限と価格は、アプリのプランの画面で確認できます。
+
+        プランが必要になるのはグループを作る側だけです。招待されたメンバーは、プランなしで参加して、楽譜を開いたり書き込んだりできます。
+    ko:
+      q: 요금이 드나요?
+      a: |
+        보기, 재생, 필기, 편집은 무료입니다. 동기화와 공유 그룹도 무료로 체험할 수 있습니다.
+
+        동기화하는 악보 수나 그룹 수·인원을 늘리고 싶다면 월간 또는 연간 자동 갱신 구독인 'folino plus', 'folino pro'를 이용해 주세요. 요금제별 한도와 가격은 앱의 요금제 화면에서 확인할 수 있습니다.
+
+        요금제가 필요한 것은 그룹을 만드는 쪽뿐입니다. 초대받은 멤버는 요금제 없이 참여해 악보를 열고 필기할 수 있습니다.
+    zh-Hans:
+      q: 需要付费吗？
+      a: |
+        阅读、播放、批注和编辑都是免费的，同步和共享群组也可以免费试用。
+
+        如需增加同步的乐谱数量，或增加群组数量和成员人数，请订阅按月或按年自动续期的“folino plus”或“folino pro”。各方案的上限和价格可在 App 的方案页面中查看。
+
+        只有创建群组的一方需要订阅方案。受邀成员无需方案即可加入，打开乐谱并添加批注。
+    zh-Hant:
+      q: 需要付費嗎？
+      a: |
+        閱讀、播放、註記與編輯都是免費的，同步與共享群組也可以免費試用。
+
+        如需增加同步的樂譜數量，或增加群組數量與成員人數，請訂閱按月或按年自動續訂的「folino plus」或「folino pro」。各方案的上限與價格可在 App 的方案頁面查看。
+
+        只有建立群組的一方需要訂閱方案。受邀成員不需方案即可加入，開啟樂譜並加上註記。
+
+  - id: devices
+    category: basics
+    featured: true
+    en:
+      q: Which devices does folino run on?
+      a: |
+        iPhone and iPad (iOS 18 or later), Mac (macOS 15 or later), and Android (Android 9 or later). Sign in with the same account and your scores sync across all of them.
+    ja:
+      q: どの端末で使えますか？
+      a: |
+        iPhoneとiPad（iOS 18以降）、Mac（macOS 15以降）、Android（Android 9以降）で使えます。同じアカウントでサインインすれば、端末の種類をまたいで楽譜を同期できます。
+    ko:
+      q: 어떤 기기에서 사용할 수 있나요?
+      a: |
+        iPhone과 iPad(iOS 18 이상), Mac(macOS 15 이상), Android(Android 9 이상)에서 사용할 수 있습니다. 같은 계정으로 로그인하면 기기 종류에 관계없이 악보를 동기화할 수 있습니다.
+    zh-Hans:
+      q: 可以在哪些设备上使用？
+      a: |
+        支持 iPhone 和 iPad（iOS 18 或更高版本）、Mac（macOS 15 或更高版本）以及 Android（Android 9 或更高版本）。使用同一个账户登录，就能跨设备类型同步乐谱。
+    zh-Hant:
+      q: 可以在哪些裝置上使用？
+      a: |
+        支援 iPhone 與 iPad（iOS 18 或以上版本）、Mac（macOS 15 或以上版本）以及 Android（Android 9 或以上版本）。使用同一個帳戶登入，就能跨裝置類型同步樂譜。
+
+  - id: file-formats
+    category: files
+    featured: true
+    en:
+      q: Which score files can I open?
+      a: |
+        MuseScore (.mscz), MusicXML (.musicxml, .mxl), MIDI, PDF, and .folino files.
+
+        folino exports to MuseScore format, PDF, MIDI, audio (.m4a), and .folino files. A PDF can include your marks.
+    ja:
+      q: どんな楽譜ファイルを開けますか？
+      a: |
+        MuseScore（.mscz）、MusicXML（.musicxml、.mxl）、MIDI、PDF、.folinoファイルを読み込めます。
+
+        書き出しは、MuseScore形式、PDF、MIDI、オーディオ（.m4a）、.folinoファイルに対応しています。PDFは、書き込みを入れたままでも書き出せます。
+    ko:
+      q: 어떤 악보 파일을 열 수 있나요?
+      a: |
+        MuseScore(.mscz), MusicXML(.musicxml, .mxl), MIDI, PDF, .folino 파일을 불러올 수 있습니다.
+
+        MuseScore 형식, PDF, MIDI, 오디오(.m4a), .folino 파일로 내보낼 수 있습니다. PDF는 필기를 넣은 채로도 내보낼 수 있습니다.
+    zh-Hans:
+      q: 可以打开哪些乐谱文件？
+      a: |
+        可以导入 MuseScore（.mscz）、MusicXML（.musicxml、.mxl）、MIDI、PDF 和 .folino 文件。
+
+        可以导出为 MuseScore 格式、PDF、MIDI、音频（.m4a）和 .folino 文件。PDF 也可以带着批注导出。
+    zh-Hant:
+      q: 可以打開哪些樂譜檔案？
+      a: |
+        可以匯入 MuseScore（.mscz）、MusicXML（.musicxml、.mxl）、MIDI、PDF 與 .folino 檔案。
+
+        可以匯出為 MuseScore 格式、PDF、MIDI、音訊（.m4a）與 .folino 檔案。PDF 也可以帶著註記匯出。
+
+  - id: musescore
+    category: files
+    en:
+      q: Can I use scores made in MuseScore?
+      a: |
+        Yes. folino opens .mscz files as they are, and can export back to MuseScore format. On a Mac, notes are entered with the same keys as in MuseScore.
+    ja:
+      q: MuseScoreで作った楽譜を使えますか？
+      a: |
+        はい。MuseScoreの.msczファイルをそのまま読み込めて、MuseScore形式で書き出すこともできます。Macでは、音符の入力もMuseScoreと同じキー操作でできます。
+    ko:
+      q: MuseScore로 만든 악보를 사용할 수 있나요?
+      a: |
+        네. MuseScore의 .mscz 파일을 그대로 불러올 수 있고, MuseScore 형식으로 내보낼 수도 있습니다. Mac에서는 음표 입력도 MuseScore와 같은 키 조작으로 할 수 있습니다.
+    zh-Hans:
+      q: 可以使用在 MuseScore 中制作的乐谱吗？
+      a: |
+        可以。MuseScore 的 .mscz 文件可以直接导入，也可以导出为 MuseScore 格式。在 Mac 上，输入音符的按键也与 MuseScore 相同。
+    zh-Hant:
+      q: 可以使用在 MuseScore 製作的樂譜嗎？
+      a: |
+        可以。MuseScore 的 .mscz 檔案可以直接匯入，也可以匯出為 MuseScore 格式。在 Mac 上，輸入音符的按鍵也與 MuseScore 相同。
+
+  - id: pdf
+    category: files
+    en:
+      q: Can folino play back a PDF score?
+      a: |
+        Yes. folino reads a PDF score into notation when you import it. From then on, playback, transposition, showing or hiding parts, and note editing all work as they do with any other format, and you can still switch to the original PDF.
+
+        On iPhone, iPad, and Mac, folino can also read scanned paper scores. On Android, it reads PDFs made by notation software, such as those exported from MuseScore or folino.
+
+        How well a PDF reads depends on the score. Fix any misread notes by editing them.
+    ja:
+      q: PDFの楽譜も再生できますか？
+      a: |
+        はい。PDFの楽譜は、取り込むときに解析して楽譜データに変換します。変換したあとは、再生や移調、パートの表示切り替え、音符の編集まで、ほかの形式の楽譜と同じように使えます。元のPDFの表示に切り替えることもできます。
+
+        iPhone、iPad、Macでは、紙の楽譜をスキャンしたPDFも変換できます。Androidで変換できるのは、MuseScoreやfolinoから書き出したPDFのような、楽譜作成ソフトで作られたPDFです。
+
+        読み取りの精度は楽譜の状態によって変わります。読み違えた音符は、編集で直してください。
+    ko:
+      q: PDF 악보도 재생할 수 있나요?
+      a: |
+        네. PDF 악보는 불러올 때 분석해 악보 데이터로 변환합니다. 변환한 뒤에는 재생과 조옮김, 파트 표시 전환, 음표 편집까지 다른 형식의 악보와 똑같이 사용할 수 있고, 원본 PDF로 전환할 수도 있습니다.
+
+        iPhone, iPad, Mac에서는 종이 악보를 스캔한 PDF도 변환할 수 있습니다. Android에서 변환할 수 있는 것은 MuseScore나 folino에서 내보낸 PDF처럼 악보 작성 소프트웨어로 만든 PDF입니다.
+
+        인식 정확도는 악보 상태에 따라 달라집니다. 잘못 읽힌 음표는 편집으로 고쳐 주세요.
+    zh-Hans:
+      q: PDF 乐谱也能播放吗？
+      a: |
+        可以。PDF 乐谱会在导入时解析并转换为乐谱数据。转换之后，播放、移调、声部显示切换乃至音符编辑，都能像其他格式的乐谱一样使用，也可以切换回原始 PDF。
+
+        在 iPhone、iPad 和 Mac 上，扫描纸质乐谱得到的 PDF 也能转换。在 Android 上可以转换的，是由打谱软件制作的 PDF，例如从 MuseScore 或 folino 导出的 PDF。
+
+        识别的准确度取决于乐谱的状态。识别错误的音符，请通过编辑修正。
+    zh-Hant:
+      q: PDF 樂譜也能播放嗎？
+      a: |
+        可以。PDF 樂譜會在匯入時解析並轉換為樂譜資料。轉換之後，播放、移調、聲部顯示切換乃至音符編輯，都能像其他格式的樂譜一樣使用，也可以切換回原始 PDF。
+
+        在 iPhone、iPad 與 Mac 上，掃描紙本樂譜得到的 PDF 也能轉換。在 Android 上可以轉換的，是由打譜軟體製作的 PDF，例如從 MuseScore 或 folino 匯出的 PDF。
+
+        辨識的準確度取決於樂譜的狀態。辨識錯誤的音符，請透過編輯修正。
+
+  - id: offline
+    category: practice
+    en:
+      q: Does folino work offline?
+      a: |
+        Yes. Imported scores are stored on your device, so you can open, play, and mark them up with no connection. Scores in a shared group are downloaded in full, too, so they open in a rehearsal room or at a venue with no signal.
+
+        Syncing, and exchanging changes with a shared group, need an internet connection.
+    ja:
+      q: インターネットにつながっていなくても使えますか？
+      a: |
+        はい。取り込んだ楽譜は端末に保存されるので、インターネットにつながっていなくても開いて、再生や書き込みができます。共有グループの楽譜も端末にまるごとダウンロードされるので、電波の届かない練習場所や本番の会場でも開けます。
+
+        同期と共有グループの内容のやり取りには、インターネット接続が必要です。
+    ko:
+      q: 인터넷에 연결되어 있지 않아도 사용할 수 있나요?
+      a: |
+        네. 불러온 악보는 기기에 저장되므로 인터넷에 연결되어 있지 않아도 열어서 재생하거나 필기할 수 있습니다. 공유 그룹의 악보도 기기에 통째로 다운로드되므로, 전파가 닿지 않는 연습실이나 공연장에서도 열 수 있습니다.
+
+        동기화와 공유 그룹의 내용을 주고받으려면 인터넷 연결이 필요합니다.
+    zh-Hans:
+      q: 没有网络也能使用吗？
+      a: |
+        可以。导入的乐谱保存在设备上，即使没有网络也能打开、播放和批注。共享群组的乐谱也会完整下载到设备上，在没有信号的排练场地或演出现场也能打开。
+
+        同步以及与共享群组交换内容时，需要连接网络。
+    zh-Hant:
+      q: 沒有網路也能使用嗎？
+      a: |
+        可以。匯入的樂譜儲存在裝置上，即使沒有網路也能開啟、播放與加上註記。共享群組的樂譜也會完整下載到裝置上，在沒有訊號的排練場地或演出現場也能開啟。
+
+        同步以及與共享群組交換內容時，需要連上網路。
+
+  - id: small-screen
+    category: practice
+    en:
+      q: Can I read scores on a phone screen?
+      a: |
+        Switch between vertical scrolling, horizontal scrolling, and pages, and hide the parts you don't need. Your own part reads comfortably even on a phone.
+    ja:
+      q: スマートフォンの画面でも楽譜を読めますか？
+      a: |
+        縦スクロール、横スクロール、ページ表示を切り替えられます。使わないパートを隠せば、スマートフォンの画面でも自分のパートに集中して読めます。
+    ko:
+      q: 스마트폰 화면에서도 악보를 읽을 수 있나요?
+      a: |
+        세로 스크롤, 가로 스크롤, 페이지 표시를 전환할 수 있습니다. 필요 없는 파트를 숨기면 스마트폰 화면에서도 내 파트에 집중해 읽을 수 있습니다.
+    zh-Hans:
+      q: 在手机屏幕上也能看谱吗？
+      a: |
+        可以在纵向滚动、横向滚动和翻页显示之间切换。隐藏不需要的声部，即使在手机屏幕上也能专注于自己的声部读谱。
+    zh-Hant:
+      q: 在手機螢幕上也能看譜嗎？
+      a: |
+        可以在垂直捲動、水平捲動與翻頁顯示之間切換。隱藏不需要的聲部，即使在手機螢幕上也能專注於自己的聲部讀譜。
+
+  - id: keyboard
+    category: practice
+    en:
+      q: Can I use folino from the keyboard?
+      a: |
+        Yes. On a Mac, every editing command can take a keyboard shortcut. Settings > Shortcuts lists every command, and you can search them by name or by key and change them. On iPad, a hardware keyboard works too.
+    ja:
+      q: キーボードで操作できますか？
+      a: |
+        はい。Macでは、すべての編集コマンドにキーボードショートカットを割り当てられます。「設定」>「ショートカット」で全コマンドを一覧でき、名前やキーで検索して変更できます。iPadでも外付けキーボードで操作できます。
+    ko:
+      q: 키보드로 조작할 수 있나요?
+      a: |
+        네. Mac에서는 모든 편집 명령에 키보드 단축키를 지정할 수 있습니다. '설정' > '단축키'에서 모든 명령을 목록으로 볼 수 있고, 이름이나 키로 검색해 바꿀 수 있습니다. iPad에서도 외장 키보드로 조작할 수 있습니다.
+    zh-Hans:
+      q: 可以用键盘操作吗？
+      a: |
+        可以。在 Mac 上，所有编辑命令都可以设置键盘快捷键。在“设置”>“快捷键”中可以查看全部命令，并按名称或按键搜索和修改。在 iPad 上也可以使用外接键盘操作。
+    zh-Hant:
+      q: 可以用鍵盤操作嗎？
+      a: |
+        可以。在 Mac 上，所有編輯指令都可以設定鍵盤快速鍵。在「設定」>「快速鍵」中可以查看全部指令，並依名稱或按鍵搜尋與修改。在 iPad 上也可以使用外接鍵盤操作。
+
+  - id: create-score
+    category: practice
+    en:
+      q: Can I write a score from scratch?
+      a: |
+        Yes. Choose the instrumentation, key, time signature, and tempo, and folino creates a new score. Afterwards you can add parts, or change the key or time signature partway through the piece.
+
+        Creating scores is free, with no limit on how many.
+    ja:
+      q: 楽譜を一から作れますか？
+      a: |
+        はい。編成を選んで、調、拍子、テンポを決めれば、新しい楽譜を作れます。作ったあとでパートを足したり、曲の途中で調や拍子を変えたりもできます。
+
+        楽譜の作成は無料で、作れる数にも制限はありません。
+    ko:
+      q: 악보를 처음부터 만들 수 있나요?
+      a: |
+        네. 편성을 고르고 조, 박자, 템포를 정하면 새 악보를 만들 수 있습니다. 만든 뒤에 파트를 추가하거나, 곡 중간에 조나 박자를 바꿀 수도 있습니다.
+
+        악보 작성은 무료이며, 만들 수 있는 개수에도 제한이 없습니다.
+    zh-Hans:
+      q: 可以从零开始创建乐谱吗？
+      a: |
+        可以。选择编制，确定调号、拍号和速度，就能创建新乐谱。创建之后还可以添加声部，或在曲子中途更改调号和拍号。
+
+        创建乐谱是免费的，数量也没有限制。
+    zh-Hant:
+      q: 可以從頭建立樂譜嗎？
+      a: |
+        可以。選擇編制，決定調號、拍號與速度，就能建立新樂譜。建立之後還可以新增聲部，或在曲子中途變更調號與拍號。
+
+        建立樂譜是免費的，數量也沒有限制。
+
+  - id: sync
+    category: sharing
+    en:
+      q: How do I sync scores with my other devices?
+      a: |
+        Sign in to folino with the same account on each device. Your scores sync along with their annotations and edits. You can turn sync off at any time in Settings.
+    ja:
+      q: 自分のほかの端末と楽譜を同期するには？
+      a: |
+        それぞれの端末で、同じアカウントでfolinoにサインインしてください。楽譜は書き込みや編集も含めて同期されます。同期は設定からいつでもオフにできます。
+    ko:
+      q: 내 다른 기기와 악보를 동기화하려면?
+      a: |
+        각 기기에서 같은 계정으로 folino에 로그인하세요. 악보가 필기와 편집 내용까지 포함해 동기화됩니다. 동기화는 설정에서 언제든지 끌 수 있습니다.
+    zh-Hans:
+      q: 如何与我的其他设备同步乐谱？
+      a: |
+        在每台设备上用同一个账户登录 folino 即可。乐谱会连同批注和编辑内容一起同步。可以随时在设置中关闭同步。
+    zh-Hant:
+      q: 如何與我的其他裝置同步樂譜？
+      a: |
+        在每台裝置上用同一個帳戶登入 folino 即可。樂譜會連同註記與編輯內容一起同步。可以隨時在設定中關閉同步。
+
+  - id: groups
+    category: sharing
+    en:
+      q: What is a shared group?
+      a: |
+        An invite-only group for sharing scores with the members of your choir or band. A score added to the group reaches every member, note fixes included. For your marks, you choose whether to share them with the group or keep them as private notes.
+    ja:
+      q: 共有グループとは何ですか？
+      a: |
+        合唱団やバンドのメンバーと楽譜を共有するための、招待制のグループです。グループに追加した楽譜は、音符の修正も含めてメンバー全員に届きます。書き込みは、メンバーと共有するか、自分だけのメモにするかを選べます。
+    ko:
+      q: 공유 그룹이란 무엇인가요?
+      a: |
+        합창단이나 밴드 멤버와 악보를 공유하기 위한 초대제 그룹입니다. 그룹에 추가한 악보는 음표 수정까지 포함해 모든 멤버에게 전해집니다. 필기는 멤버와 공유할지, 나만의 메모로 둘지 고를 수 있습니다.
+    zh-Hans:
+      q: 什么是共享群组？
+      a: |
+        用于与合唱团或乐队成员共享乐谱的邀请制群组。添加到群组的乐谱，连同音符修改都会送达每位成员。批注可以选择与成员共享，或作为只属于自己的笔记。
+    zh-Hant:
+      q: 什麼是共享群組？
+      a: |
+        用於與合唱團或樂團成員共享樂譜的邀請制群組。加入群組的樂譜，連同音符修正都會送到每位成員。註記可以選擇與成員共享，或作為只屬於自己的筆記。
+
+  - id: join-group
+    category: sharing
+    en:
+      q: How do I join a group I was invited to?
+      a: |
+        Open the invite link on a device with folino installed, and folino asks you to confirm. On a Mac, you can also paste the link into Join with Invite Link… in the menu.
+
+        Joining a group requires signing in.
+    ja:
+      q: 招待されたグループに参加するには？
+      a: |
+        届いた招待リンクを、folinoをインストールした端末で開いてください。参加の確認が表示されます。Macでは、メニューの「招待リンクで参加…」にリンクを貼り付けても参加できます。
+
+        グループへの参加にはサインインが必要です。
+    ko:
+      q: 초대받은 그룹에 참여하려면?
+      a: |
+        받은 초대 링크를 folino가 설치된 기기에서 열어 주세요. 참여 확인이 표시됩니다. Mac에서는 메뉴의 '초대 링크로 참여…'에 링크를 붙여 넣어도 참여할 수 있습니다.
+
+        그룹에 참여하려면 로그인이 필요합니다.
+    zh-Hans:
+      q: 如何加入受邀的群组？
+      a: |
+        请在安装了 folino 的设备上打开收到的邀请链接，会显示加入确认。在 Mac 上，也可以把链接粘贴到菜单中的“通过邀请链接加入…”来加入。
+
+        加入群组需要登录。
+    zh-Hant:
+      q: 如何加入受邀的群組？
+      a: |
+        請在安裝了 folino 的裝置上開啟收到的邀請連結，會顯示加入確認。在 Mac 上，也可以把連結貼到選單中的「透過邀請連結加入…」來加入。
+
+        加入群組需要登入。
+
+  - id: data
+    category: account
+    en:
+      q: Where are my scores stored?
+      a: |
+        Until you sign in, your scores and marks stay on your device and are never sent anywhere. Once you sign in and turn sync on, your scores and marks are stored in the cloud so they can sync.
+
+        See the [privacy policy](https://harmolo.com/folino/privacy-policy/en/) for details.
+    ja:
+      q: 楽譜はどこに保存されますか？
+      a: |
+        サインインしない限り、楽譜や書き込みは端末の中だけに保存され、外に送られることはありません。サインインして同期をオンにすると、楽譜と書き込みは同期のためにクラウドに保存されます。
+
+        詳しくは[プライバシーポリシー](https://harmolo.com/folino/privacy-policy/ja/)をご覧ください。
+    ko:
+      q: 악보는 어디에 저장되나요?
+      a: |
+        로그인하지 않는 한 악보와 필기는 기기 안에만 저장되며 밖으로 보내지지 않습니다. 로그인해 동기화를 켜면 악보와 필기는 동기화를 위해 클라우드에 저장됩니다.
+
+        자세한 내용은 [개인정보 처리방침](https://harmolo.com/folino/privacy-policy/ko/)을 참고하세요.
+    zh-Hans:
+      q: 乐谱保存在哪里？
+      a: |
+        只要不登录，乐谱和批注就只保存在设备上，不会被发送到任何地方。登录并开启同步后，乐谱和批注会为了同步而保存在云端。
+
+        详情请参阅[隐私政策](https://harmolo.com/folino/privacy-policy/zh-Hans/)。
+    zh-Hant:
+      q: 樂譜儲存在哪裡？
+      a: |
+        只要不登入，樂譜與註記就只儲存在裝置上，不會被傳送到任何地方。登入並開啟同步後，樂譜與註記會為了同步而儲存在雲端。
+
+        詳情請參閱[隱私權政策](https://harmolo.com/folino/privacy-policy/zh-Hant/)。
+
+  - id: cancel
+    category: account
+    en:
+      q: How do I cancel a subscription?
+      a: |
+        If you subscribed on iPhone, iPad, or Mac, cancel in your Apple Account settings; if you subscribed on Android, cancel from Subscriptions in Google Play. You can cancel at any time.
+
+        After you cancel, your scores and marks stay as they are, and you can still open and edit them. What stops is syncing more scores and growing your groups.
+    ja:
+      q: サブスクリプションを解約するには？
+      a: |
+        iPhone、iPad、Macで購入した場合はApple Accountの設定から、Androidで購入した場合はGoogle Playの定期購入の画面から、いつでも解約できます。
+
+        解約しても、それまでの楽譜や書き込みは消えず、そのまま開いて編集できます。同期する楽譜を増やすことや、グループを広げることが止まるだけです。
+    ko:
+      q: 구독을 해지하려면?
+      a: |
+        iPhone, iPad, Mac에서 구매했다면 Apple 계정 설정에서, Android에서 구매했다면 Google Play의 구독 화면에서 언제든지 해지할 수 있습니다.
+
+        해지해도 그동안의 악보와 필기는 사라지지 않으며, 그대로 열어서 편집할 수 있습니다. 동기화하는 악보를 늘리거나 그룹을 키우는 것만 멈춥니다.
+    zh-Hans:
+      q: 如何取消订阅？
+      a: |
+        如果是在 iPhone、iPad 或 Mac 上购买的，可以在 Apple 账户设置中取消；如果是在 Android 上购买的，可以在 Google Play 的“订阅”页面中取消。随时都可以取消。
+
+        取消订阅后，之前的乐谱和批注不会消失，仍然可以打开和编辑。只是无法再增加同步的乐谱，或扩大群组。
+    zh-Hant:
+      q: 如何取消訂閱？
+      a: |
+        如果是在 iPhone、iPad 或 Mac 上購買的，可以在 Apple 帳號設定中取消；如果是在 Android 上購買的，可以在 Google Play 的「訂閱」頁面中取消。隨時都可以取消。
+
+        取消訂閱後，之前的樂譜與註記不會消失，仍然可以開啟與編輯。只是無法再增加同步的樂譜，或擴大群組。

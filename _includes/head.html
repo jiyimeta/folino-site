@@ -1,0 +1,101 @@
+{%- comment -%}
+  Expects `t` (the _data/i18n.yml entry for this page's locale) and `page_locales` to be assigned by the
+  layout, and `page.locale` / `page.kind` to be set by the page front matter.
+{%- endcomment -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{%- comment -%}
+  `/` is the only page that does not name a language, so it is the only page that guesses one. Every other URL
+  was reached by choosing a language and is left alone - and so is `/` once the switcher has recorded a choice.
+
+  The script is inline and runs before the stylesheet so a visitor who is about to be sent elsewhere never sees
+  the English page paint first. It is written out only here; the rest of the site stays free of JavaScript
+  apart from the few lines in the layout that remember the switcher's choice.
+{%- endcomment -%}
+{%- if page.url == '/' %}
+<script>
+  (function () {
+    var STORAGE_KEY = 'folino-lang';
+    try {
+      // No storage means no way to remember "leave me on English", and a
+      // redirect nobody can undo is worse than no redirect at all.
+      if (localStorage.getItem(STORAGE_KEY)) return;
+    } catch (e) {
+      return;
+    }
+
+    var paths = {
+      {%- for l in page_locales -%}
+        {%- assign tags = l.code | downcase | split: '|' -%}
+        {%- if l.match -%}{%- assign tags = tags | concat: l.match -%}{%- endif -%}
+        {%- include locale-url.html code=l.code -%}
+        {%- for tag in tags %} {{ tag | jsonify }}: {{ locale_url | relative_url | jsonify }},{% endfor -%}
+      {%- endfor %}
+    };
+
+    var wanted = navigator.languages || (navigator.language ? [navigator.language] : []);
+    for (var i = 0; i < wanted.length; i++) {
+      var tag = String(wanted[i]).toLowerCase();
+      while (tag) {
+        if (Object.prototype.hasOwnProperty.call(paths, tag)) {
+          var path = paths[tag];
+          // English resolves to this very page; anything else is a move.
+          if (path !== location.pathname) {
+            location.replace(path + location.search + location.hash);
+          }
+          return;
+        }
+        var cut = tag.lastIndexOf('-');
+        if (cut < 0) break;
+        tag = tag.slice(0, cut);
+      }
+    }
+  })();
+</script>
+{%- endif %}
+
+{%- assign home = site.data.home[page.locale] -%}
+{%- if page.kind == 'faq' -%}
+  {%- assign page_title = home.nav.faq | append: ' | folino' -%}
+{%- else -%}
+  {%- assign page_title = home.title -%}
+{%- endif -%}
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ home.description }}">
+
+{%- comment -%}
+  Safari's Smart App Banner: "Open" when folino is installed, "Get" when it is not. It needs no domain
+  association.
+{%- endcomment %}
+<meta name="apple-itunes-app" content="app-id={{ site.data.folino.app_store_id }}">
+
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+{%- for l in page_locales %}
+  {%- include locale-url.html code=l.code %}
+<link rel="alternate" hreflang="{{ l.code }}" href="{{ locale_url | absolute_url }}">
+{%- endfor %}
+{%- include locale-url.html code='en' %}
+<link rel="alternate" hreflang="x-default" href="{{ locale_url | absolute_url }}">
+
+<meta property="og:site_name" content="folino">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ home.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta name="twitter:card" content="summary">
+
+{%- comment -%}
+  The site's name for Google Search, which shows one name and one favicon per host - the reason folino has a
+  host of its own rather than a folder on harmolo.com. Google reads it from the home page.
+{%- endcomment -%}
+{%- if page.url == '/' %}
+<script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "WebSite", "name": "folino", "url": {{ '/' | absolute_url | jsonify }}}
+</script>
+{%- endif %}
+
+<link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}" type="image/png" sizes="64x64">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/folino.css' | relative_url }}">

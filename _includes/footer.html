@@ -1,0 +1,32 @@
+{%- comment -%}
+  The home page and the FAQ link to each other, then out to harmolo.com: folino's privacy policy, published
+  there in every one of folino's languages, and Harmolo's own home in the same language.
+{%- endcomment -%}
+{%- assign fh = site.data.home[page.locale] -%}
+{%- if page.locale == 'en' -%}
+  {%- assign harmolo_home = site.harmolo_url | append: '/' -%}
+{%- else -%}
+  {%- assign harmolo_home = site.harmolo_url | append: '/' | append: page.locale | append: '/' -%}
+{%- endif -%}
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p class="site-footer__contact">
+      {{ t.email_label }}:
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </p>
+
+    <p class="site-footer__links">
+      {%- if page.kind == 'faq' %}
+      {%- include locale-url.html code=page.locale kind='home' %}
+      <a href="{{ locale_url | relative_url }}">folino</a> ·
+      {%- else %}
+      {%- include locale-url.html code=page.locale kind='faq' %}
+      <a href="{{ locale_url | relative_url }}">{{ fh.nav.faq }}</a> ·
+      {%- endif %}
+      <a href="{{ site.harmolo_url }}/folino/privacy-policy/{{ page.locale }}/">{{ t.privacy_link }}</a> ·
+      <a href="{{ harmolo_home }}">Harmolo</a>
+    </p>
+
+    <p class="site-footer__copyright">© {{ site.time | date: '%Y' }} Harmolo</p>
+  </div>
+</footer>

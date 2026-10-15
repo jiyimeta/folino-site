@@ -1,0 +1,14 @@
+{%- comment -%}
+  One app screenshot. `include.shot` names both the image (images/<locale>/<shot>.webp, captured with
+  folino's `Scripts/capture-screenshots.sh --bare`) and its alt text in home.yml's `shots`;
+  `include.device` picks the corner radius and the intrinsic size, which every capture of that device shares.
+{%- endcomment -%}
+{%- case include.device -%}
+  {%- when 'ipad' -%}{%- assign w = 1032 -%}{%- assign h = 1376 -%}
+  {%- when 'iphone' -%}{%- assign w = 660 -%}{%- assign h = 1434 -%}
+  {%- when 'mac' -%}{%- assign w = 1440 -%}{%- assign h = 900 -%}
+{%- endcase -%}
+<img class="fol-screen fol-screen--{{ include.device }}"
+     src="{{ '/images/' | append: page.locale | append: '/' | append: include.shot | append: '.webp' | relative_url }}"
+     width="{{ w }}" height="{{ h }}" alt="{{ fh.shots[include.shot] }}"
+     {%- unless include.eager %} loading="lazy"{% endunless %} decoding="async">

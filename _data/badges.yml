@@ -1,0 +1,19 @@
+# Intrinsic dimensions of the store badges under assets/badges/, so the
+# templates can reserve space before the images load. The badges and these
+# numbers come from harmolo.com's Scripts/fetch-store-badges.py.
+
+en:
+  ios:     { width: 119.664, height: 40 }
+  android: { width: 564, height: 168 }
+ja:
+  ios:     { width: 108.852, height: 40 }
+  android: { width: 646, height: 192 }
+ko:
+  ios:     { width: 129.701, height: 40 }
+  android: { width: 646, height: 192 }
+zh-Hans:
+  ios:     { width: 108.852, height: 40 }
+  android: { width: 646, height: 192 }
+zh-Hant:
+  ios:     { width: 108.852, height: 40 }
+  android: { width: 646, height: 192 }
