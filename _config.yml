@@ -1,9 +1,17 @@
 title: folino
 email: contact@harmolo.com
 url: https://folino.app
+# Spelled out because github-metadata guesses `/pages/<owner>/<repo>` when it cannot reach the API (a local build), and
+# the sitemap's URLs are built from it.
+baseurl: ""
 
 # Harmolo, who makes folino, keeps its own site; the footer links to it, and the privacy policy to Harmolo's own.
 harmolo_url: https://harmolo.com
+
+# A new domain with few links in gets crawled slowly; the sitemap tells Google every page there is, and the plugin also
+# writes a robots.txt pointing at it.
+plugins:
+  - jekyll-sitemap
 
 # Overriding `exclude` replaces Jekyll's defaults, so the usual entries are
 # repeated here alongside the repo's own README.
