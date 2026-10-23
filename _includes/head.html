@@ -13,6 +13,8 @@
   {%- assign page_title = t.privacy_link | append: ' | folino' -%}
   {%- comment -%} The home page's description may be in another language here; the title is in this one. {%- endcomment -%}
   {%- assign page_description = page_title -%}
+{%- elsif page.kind == 'not-found' -%}
+  {%- assign page_title = page.title | append: ' | folino' -%}
 {%- else -%}
   {%- assign page_title = home.title -%}
 {%- endif -%}
@@ -25,6 +27,12 @@
 {%- endcomment %}
 <meta name="apple-itunes-app" content="app-id={{ site.data.folino.app_store_id }}">
 
+{%- comment -%}
+  The not-found page is served at whatever address was asked for, so it names no address of its own.
+{%- endcomment -%}
+{%- if page.kind == 'not-found' %}
+<meta name="robots" content="noindex">
+{%- else %}
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 
 {%- for l in page_locales %}
@@ -33,6 +41,7 @@
 {%- endfor %}
 {%- include locale-url.html code='en' %}
 <link rel="alternate" hreflang="x-default" href="{{ locale_url | absolute_url }}">
+{%- endif %}
 
 <meta property="og:site_name" content="folino">
 <meta property="og:title" content="{{ page_title }}">
