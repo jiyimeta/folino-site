@@ -30,5 +30,21 @@
     </main>
 
     {%- include footer.html -%}
+
+    {%- comment -%}
+      Picking a language is a decision `/` must not overrule, so the choice is kept in a cookie the server reads
+      there (functions/index.js) before it looks at the browser's languages. The cookie lasts a year.
+    {%- endcomment -%}
+    <script>
+      (function () {
+        var menu = document.querySelector('.lang__menu');
+        if (!menu) return;
+        menu.addEventListener('click', function (event) {
+          var link = event.target.closest && event.target.closest('a[hreflang]');
+          if (!link) return;
+          document.cookie = 'folino-lang=' + link.getAttribute('hreflang') + '; Path=/; Max-Age=31536000; SameSite=Lax; Secure';
+        });
+      })();
+    </script>
   </body>
 </html>

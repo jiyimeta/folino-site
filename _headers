@@ -1,0 +1,8 @@
+# Cloudflare Pages response headers for the static files (functions/index.js sets its own for `/`).
+# folino-site.pages.dev and each deployment's own address serve the same pages as folino.app; only
+# folino.app is to be indexed.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
