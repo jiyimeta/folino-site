@@ -2,13 +2,6 @@
 # privacy policy is in all of them; the home page and the FAQ only in folino's
 # own languages (`locales` in _data/folino.yml). `code` is used as the
 # <html lang> value and as the key into every other file in _data.
-#
-# `match` lists extra BCP 47 tags that should resolve to this locale when the
-# English home page reads the visitor's browser languages. The lowercased `code`
-# always matches, and matching falls back to shorter prefixes (`ja-JP` finds
-# `ja`), so `match` is only needed where the tag and the code differ: the
-# Chinese scripts have their own region codes, and Portuguese ships only in its
-# Brazilian form.
 - code: en
   name: English
 - code: ja
@@ -17,11 +10,8 @@
   name: 한국어
 - code: zh-Hans
   name: 简体中文
-  # Bare `zh` lands here, so it must not be listed under zh-Hant as well.
-  match: [zh-cn, zh-sg, zh]
 - code: zh-Hant
   name: 繁體中文
-  match: [zh-tw, zh-hk, zh-mo]
 - code: de
   name: Deutsch
 - code: es
@@ -34,7 +24,6 @@
   name: Nederlands
 - code: pt-BR
   name: Português (BR)
-  match: [pt]
 - code: ru
   name: Русский
 - code: tr

@@ -5,56 +5,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{%- comment -%}
-  `/` is the only page that does not name a language, so it is the only page that guesses one. Every other URL
-  was reached by choosing a language and is left alone - and so is `/` once the switcher has recorded a choice.
-
-  The script is inline and runs before the stylesheet so a visitor who is about to be sent elsewhere never sees
-  the English page paint first. It is written out only here; the rest of the site stays free of JavaScript
-  apart from the few lines in the layout that remember the switcher's choice.
-{%- endcomment -%}
-{%- if page.url == '/' %}
-<script>
-  (function () {
-    var STORAGE_KEY = 'folino-lang';
-    try {
-      // No storage means no way to remember "leave me on English", and a
-      // redirect nobody can undo is worse than no redirect at all.
-      if (localStorage.getItem(STORAGE_KEY)) return;
-    } catch (e) {
-      return;
-    }
-
-    var paths = {
-      {%- for l in page_locales -%}
-        {%- assign tags = l.code | downcase | split: '|' -%}
-        {%- if l.match -%}{%- assign tags = tags | concat: l.match -%}{%- endif -%}
-        {%- include locale-url.html code=l.code -%}
-        {%- for tag in tags %} {{ tag | jsonify }}: {{ locale_url | relative_url | jsonify }},{% endfor -%}
-      {%- endfor %}
-    };
-
-    var wanted = navigator.languages || (navigator.language ? [navigator.language] : []);
-    for (var i = 0; i < wanted.length; i++) {
-      var tag = String(wanted[i]).toLowerCase();
-      while (tag) {
-        if (Object.prototype.hasOwnProperty.call(paths, tag)) {
-          var path = paths[tag];
-          // English resolves to this very page; anything else is a move.
-          if (path !== location.pathname) {
-            location.replace(path + location.search + location.hash);
-          }
-          return;
-        }
-        var cut = tag.lastIndexOf('-');
-        if (cut < 0) break;
-        tag = tag.slice(0, cut);
-      }
-    }
-  })();
-</script>
-{%- endif %}
-
 {%- assign home = site.data.home[home_locale] -%}
 {%- assign page_description = home.description -%}
 {%- if page.kind == 'faq' -%}

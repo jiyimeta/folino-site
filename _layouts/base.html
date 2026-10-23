@@ -30,24 +30,5 @@
     </main>
 
     {%- include footer.html -%}
-
-    {%- comment -%}
-      Picking a language is a decision the home page must not overrule, so the
-      choice is recorded here and read back by the guess in head.html. Failing
-      to store it only costs the visitor that memory, so the error is swallowed.
-    {%- endcomment -%}
-    <script>
-      (function () {
-        var menu = document.querySelector('.lang__menu');
-        if (!menu) return;
-        menu.addEventListener('click', function (event) {
-          var link = event.target.closest && event.target.closest('a[hreflang]');
-          if (!link) return;
-          try {
-            localStorage.setItem('folino-lang', link.getAttribute('hreflang'));
-          } catch (e) {}
-        });
-      })();
-    </script>
   </body>
 </html>
