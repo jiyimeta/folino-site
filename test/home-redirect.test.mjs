@@ -1,21 +1,23 @@
-// Checks functions/index.js, the Function that serves `/`. Run with `node --test test/home-redirect.test.mjs`
-// (Node 22 or later).
+// Checks worker/, the Worker that serves `/`. Run with `node --test test/home-redirect.test.mjs` (Node 22 or later).
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 
-import { HOME_PATHS, onRequest } from '../functions/index.js';
+import { HOME_PATHS } from '../worker/home.js';
+import worker from '../worker/index.js';
 
 const HOME_HTML = '<!DOCTYPE html><title>folino</title>';
 
 async function get(path, headers = {}, { host = 'folino.app', method = 'GET' } = {}) {
   const request = new Request(`https://${host}${path}`, { method, headers });
   let servedPage = false;
-  const next = async () => {
-    servedPage = true;
-    return new Response(HOME_HTML, { status: 200, headers: { 'Content-Type': 'text/html', Vary: 'Accept-Encoding' } });
+  const ASSETS = {
+    fetch: async () => {
+      servedPage = true;
+      return new Response(HOME_HTML, { status: 200, headers: { 'Content-Type': 'text/html', Vary: 'Accept-Encoding' } });
+    },
   };
-  const response = await onRequest({ request, next });
+  const response = await worker.fetch(request, { ASSETS });
   return { response, servedPage };
 }
 
@@ -110,11 +112,22 @@ test('only GET and HEAD are redirected', async () => {
   assert.equal(head.response.status, 302);
 });
 
-test('the pages.dev copy is marked noindex and folino.app is not', async () => {
-  const pagesDev = await get('/', {}, { host: 'folino-site.pages.dev' });
-  assert.equal(pagesDev.response.headers.get('X-Robots-Tag'), 'noindex');
+test('the workers.dev copies are marked noindex and folino.app is not', async () => {
+  for (const host of ['folino-site.example.workers.dev', 'main.folino-site.example.workers.dev']) {
+    const copy = await get('/', {}, { host });
+    assert.equal(copy.response.headers.get('X-Robots-Tag'), 'noindex', host);
+  }
   const live = await get('/', {});
   assert.equal(live.response.headers.get('X-Robots-Tag'), null);
+});
+
+test('wrangler.jsonc runs this Worker for `/` alone and has a 404 page to fall back on', () => {
+  const jsonc = readFileSync(new URL('../wrangler.jsonc', import.meta.url), 'utf8');
+  const config = JSON.parse(jsonc.replace(/^\s*\/\/.*$/gm, ''));
+  assert.equal(config.main, 'worker/index.js');
+  assert.deepEqual(config.assets.run_worker_first, ['/']);
+  assert.equal(config.assets.not_found_handling, '404-page');
+  assert.match(readFileSync(new URL('../404.html', import.meta.url), 'utf8'), /^permalink: \/404\.html$/m);
 });
 
 test('HOME_PATHS reaches exactly the home pages of the locales in _data/folino.yml', () => {

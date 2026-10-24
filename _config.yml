@@ -14,8 +14,9 @@ plugins:
   - jekyll-sitemap
 
 # Overriding `exclude` replaces Jekyll's defaults, so the usual entries are
-# repeated here alongside the repo's own README. Cloudflare Pages reads
-# functions/ from the repo itself, not from the built site, and test/ checks it.
+# repeated here alongside the repo's own README. The Worker (worker/, its tests in
+# test/, and wrangler.jsonc) is deployed from the repo, and everything in _site is
+# served to anyone who asks for it.
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -25,12 +26,11 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - README.md
-  - functions/
+  - worker/
   - test/
+  - wrangler.jsonc
 
-# Jekyll skips files that start with an underscore; Cloudflare Pages reads these
-# from the built site. _routes.json runs functions/ for `/` alone, so no other
-# request costs a Function invocation.
+# Jekyll skips files that start with an underscore; Cloudflare reads _headers from
+# the built site.
 include:
   - _headers
-  - _routes.json
