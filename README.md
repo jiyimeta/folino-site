@@ -33,7 +33,9 @@ The `github-pages` gem pins Jekyll and its plugins (it is how the site was built
 
 The Worker is named `folino-site`, the same as `name` in `wrangler.jsonc`, and its Workers Builds settings are:
 
-- Build command `bundle install && bundle exec jekyll build`; the deploy and preview commands are left at their
-  defaults, which deploy with `wrangler.jsonc`. No build variables: the output is the same without
-  `JEKYLL_ENV`, and the explicit `baseurl` in `_config.yml` keeps github-metadata from needing the repository's name.
+- Build command `RUBYOPT=-EUTF-8 bundle exec jekyll build`; the deploy and preview commands are left at their
+  defaults, which deploy with `wrangler.jsonc`. The build image runs `bundle install` itself before the command, and
+  its locale is not UTF-8: without `-EUTF-8` Ruby reads files as US-ASCII, and Sass stops at a non-ASCII character in
+  `jekyll-theme-primer`, the theme `github-pages` adds by default. No build variables: the output is the same without `JEKYLL_ENV`, and the
+  explicit `baseurl` in `_config.yml` keeps github-metadata from needing the repository's name.
 - Custom domains `folino.app` and `www.folino.app`; a Cloudflare redirect rule sends `www` to the bare domain.
