@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="<%= font_css_url %>">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body {
+    position: relative;
+    width: <%= width %>px;
+    height: <%= height %>px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #ffffff 0%, #cee1ff 100%);
+    color: #1e2438;
+  }
+
+  /* The left column: wordmark, then the home page's hero title (serif) and subtitle (sans). */
+  .text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 80px;
+    width: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .wordmark { width: 300px; margin: 0 0 30px -10px; }
+  h1 {
+    margin: 0;
+    font-family: "<%= serif %>", serif;
+    font-size: <%= title_size %>px;
+    font-weight: 600;
+    line-height: 1.22;
+    letter-spacing: -0.005em;
+  }
+  h1 span { display: block; white-space: nowrap; }
+  p {
+    margin: 22px 0 0;
+    font-family: "<%= sans %>", sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: #55627d;
+    white-space: nowrap;
+  }
+
+  /* The right side: the home page's own iPad and iPhone screenshots, the iPad bleeding off the bottom. */
+  .screen {
+    position: absolute;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 18px 50px rgba(30, 60, 110, 0.22);
+  }
+  .screen img { display: block; width: 100%; }
+  .ipad { left: 640px; top: 62px; width: 440px; border-radius: 22px; }
+  .iphone { left: 590px; top: 250px; width: 170px; border-radius: 26px; }
+</style>
+</head>
+<body>
+  <div class="text">
+    <img class="wordmark" src="<%= wordmark_url %>" alt="">
+    <h1><% title_lines.each do |line| %><span><%= ERB::Util.html_escape(line) %></span><% end %></h1>
+    <p><%= ERB::Util.html_escape(subtitle) %></p>
+  </div>
+  <div class="screen ipad"><img src="<%= ipad_url %>" alt=""></div>
+  <div class="screen iphone"><img src="<%= iphone_url %>" alt=""></div>
+  <script>
+    // render.rb reads this back with --dump-dom: a font that never loaded falls back to a system font
+    // without any error, and the picture alone would not say so.
+    document.fonts.ready.then(function () {
+      var wanted = <%= [serif, sans].to_json %>;
+      var missing = wanted.filter(function (family) {
+        var loaded = false;
+        document.fonts.forEach(function (face) {
+          if (face.family.replace(/"/g, '') === family && face.status === 'loaded') loaded = true;
+        });
+        return !loaded;
+      });
+      document.documentElement.setAttribute('data-fonts', missing.length ? 'missing: ' + missing.join(', ') : 'ok');
+    });
+  </script>
+</body>
+</html>

@@ -48,7 +48,21 @@
 <meta property="og:description" content="{{ page_description }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta name="twitter:card" content="summary">
+
+{%- comment -%}
+  The card a link to the page shows: the home page's hero in `home_locale`, rendered by tools/og/render.rb. Its alt
+  text is the words in the picture.
+{%- endcomment -%}
+{%- capture og_alt -%}
+  folino:
+  {%- for group in home.hero.title_groups %} {{ group | join: home.hero.title_separator }}{% endfor %}
+  {{- ' ' }}{{ home.hero.subtitle }}
+{%- endcapture %}
+<meta property="og:image" content="{{ '/images/og/' | append: home_locale | append: '.png' | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ og_alt | escape }}">
+<meta name="twitter:card" content="summary_large_image">
 
 {%- comment -%}
   The site's name for Google Search, which shows one name and one favicon per host - the reason folino has a

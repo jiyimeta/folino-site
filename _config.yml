@@ -15,8 +15,8 @@ plugins:
 
 # Overriding `exclude` replaces Jekyll's defaults, so the usual entries are
 # repeated here alongside the repo's own README. The Worker (worker/, its tests in
-# test/, and wrangler.jsonc) is deployed from the repo, and everything in _site is
-# served to anyone who asks for it.
+# test/, and wrangler.jsonc) is deployed from the repo, tools/ makes images that
+# are committed, and everything in _site is served to anyone who asks for it.
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -28,6 +28,7 @@ exclude:
   - README.md
   - worker/
   - test/
+  - tools/
   - wrangler.jsonc
 
 # Jekyll skips files that start with an underscore; Cloudflare reads _headers from

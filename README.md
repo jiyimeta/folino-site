@@ -18,6 +18,11 @@ Worker keep out of search.
 - **Shared with harmolo.com**: `assets/css/style.css`, the store badges and the locale plumbing came from
   [jiyimeta.github.io](https://github.com/jiyimeta/jiyimeta.github.io). A fix to one of them may be owed to the other.
 - **Screenshots** under `images/<locale>/` are captured with folino's `Scripts/capture-screenshots.sh --bare`.
+- **Link previews**: every page's `og:image` is `images/og/<locale>.png`, the home page's hero at 1200×630 in the
+  page's language (English for a privacy policy in a language the home page lacks). `ruby tools/og/render.rb` makes
+  them from `_data/home.yml` and those screenshots, in the fonts of folino's store screenshots - run it after changing
+  either, and commit the PNGs. It needs Google Chrome and the network (the fonts come from Google Fonts), and stops
+  if a font did not load rather than writing a picture in a fallback font.
 
 ## Preview locally
 
