@@ -10,7 +10,7 @@ Last updated: ◯◯, 2026
 
 These Terms of Use set out the conditions for using the features of folino, the sheet-music app provided by Harmolo (“we”, “us”), that you use while signed in — syncing between your devices, shared groups, profiles, subscriptions and the like (the “Service”). Features used without signing in are covered by the license terms of the store you got the app from.
 
-These Terms are a translation for reference; the Japanese version is the authoritative one.
+This English version is a translation for reference. If it differs from the Japanese version, the Japanese version prevails.
 
 ## 1. Agreement
 
