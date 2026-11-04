@@ -72,7 +72,7 @@ We may change these Terms in accordance with Article 548-4 of the Civil Code of 
 
 ## 10. Governing law and jurisdiction
 
-These Terms are governed by the laws of Japan. Any dispute about the Service is subject to the exclusive jurisdiction, in the first instance, of the district court with jurisdiction over our location.
+These Terms are governed by the laws of Japan. Any dispute about the Service is subject to the exclusive jurisdiction, in the first instance, of the Tokyo District Court.
 
 ## Contact
 
