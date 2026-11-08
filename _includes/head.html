@@ -9,8 +9,12 @@
 {%- assign page_description = home.description -%}
 {%- if page.kind == 'faq' -%}
   {%- assign page_title = home.nav.faq | append: ' | folino' -%}
-{%- elsif page.kind == 'privacy' -%}
-  {%- assign page_title = t.privacy_link | append: ' | folino' -%}
+{%- elsif page.kind == 'privacy' or page.kind == 'terms' -%}
+  {%- if page.kind == 'terms' -%}
+    {%- assign page_title = t.terms_link | append: ' | folino' -%}
+  {%- else -%}
+    {%- assign page_title = t.privacy_link | append: ' | folino' -%}
+  {%- endif -%}
   {%- comment -%} The home page's description may be in another language here; the title is in this one. {%- endcomment -%}
   {%- assign page_description = page_title -%}
 {%- elsif page.kind == 'not-found' -%}

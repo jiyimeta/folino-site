@@ -1,9 +1,14 @@
 {%- comment -%}
-  The home page, the FAQ and the privacy policy link to the two of them a visitor is not on - the home page and
-  the FAQ in `home_locale`, the policy in this page's language - and then out to Harmolo's own home, which is
-  published in every language here.
+  Every page links to the pages of the site a visitor is not on - the home page and the FAQ in `home_locale`, the
+  privacy policy in this page's language, the Terms of Use in this page's language where they are published in it
+  and in English otherwise - and then out to Harmolo's own home, which is published in every language here.
 {%- endcomment -%}
 {%- assign fh = site.data.home[home_locale] -%}
+{%- if site.data.folino.terms_locales contains page.locale -%}
+  {%- assign terms_locale = page.locale -%}
+{%- else -%}
+  {%- assign terms_locale = 'en' -%}
+{%- endif -%}
 {%- if page.locale == 'en' -%}
   {%- assign harmolo_home = site.harmolo_url | append: '/' -%}
 {%- else -%}
@@ -28,6 +33,10 @@
       {%- if page.kind != 'privacy' %}
       {%- include locale-url.html code=page.locale kind='privacy' %}
       <a href="{{ locale_url | relative_url }}">{{ t.privacy_link }}</a> ·
+      {%- endif %}
+      {%- if page.kind != 'terms' %}
+      {%- include locale-url.html code=terms_locale kind='terms' %}
+      <a href="{{ locale_url | relative_url }}">{{ t.terms_link }}</a> ·
       {%- endif %}
       <a href="{{ harmolo_home }}">Harmolo</a>
     </p>

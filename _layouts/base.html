@@ -2,13 +2,17 @@
 {%- assign current_locale = site.data.locales | where: 'code', page.locale | first -%}
 {%- comment -%}
   `page_locales` is every language this page is published in, which the language switcher and the hreflang
-  alternates list: all of _data/locales.yml for the privacy policy, folino's own languages for the home page and
-  the FAQ. `home_locale` is the language the header and footer link to the home page and the FAQ in - this
-  page's, or English where those two are not published in it.
+  alternates list: all of _data/locales.yml for the privacy policy, Japanese and English for the Terms of Use
+  (`terms_locales` in _data/folino.yml), folino's own languages for the home page and the FAQ. `home_locale` is
+  the language the header and footer link to the home page and the FAQ in - this page's, or English where those
+  two are not published in it.
 {%- endcomment -%}
 {%- assign folino_locales = site.data.folino.locales -%}
+{%- assign terms_locales = site.data.folino.terms_locales -%}
 {%- if page.kind == 'privacy' -%}
   {%- assign page_locales = site.data.locales -%}
+{%- elsif page.kind == 'terms' -%}
+  {%- assign page_locales = site.data.locales | where_exp: 'l', 'terms_locales contains l.code' -%}
 {%- else -%}
   {%- assign page_locales = site.data.locales | where_exp: 'l', 'folino_locales contains l.code' -%}
 {%- endif -%}

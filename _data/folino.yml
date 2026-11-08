@@ -7,6 +7,13 @@
 # English home page and FAQ.
 locales: [en, ja, ko, zh-Hans, zh-Hant]
 
+# `terms_locales` lists the languages the Terms of Use (terms/<locale>.md) are
+# published in: Japanese, which prevails, and English, a translation for
+# reference. Every other page links to the English Terms. The app links to the
+# same two (folino's Domain `FolinoLegalLinks.terms`), so a language is added
+# here and there together.
+terms_locales: [en, ja]
+
 # The App Store id, for the Smart App Banner Safari shows above every page.
 app_store_id: 6766994527
 

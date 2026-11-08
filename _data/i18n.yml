@@ -5,6 +5,7 @@ en:
   language_label: Language
   email_label: Email
   privacy_link: Privacy policy
+  terms_link: Terms of Use
   stores:
     ios: App Store
     android: Google Play
@@ -13,6 +14,7 @@ ja:
   language_label: 言語
   email_label: メールアドレス
   privacy_link: プライバシーポリシー
+  terms_link: 利用規約
   stores:
     ios: App Store
     android: Google Play
@@ -21,6 +23,7 @@ ko:
   language_label: 언어
   email_label: 이메일
   privacy_link: 개인정보 처리방침
+  terms_link: 이용약관
   stores:
     ios: App Store
     android: Google Play
@@ -29,6 +32,7 @@ zh-Hans:
   language_label: 语言
   email_label: 电子邮箱
   privacy_link: 隐私政策
+  terms_link: 使用条款
   stores:
     ios: App Store
     android: Google Play
@@ -37,6 +41,7 @@ zh-Hant:
   language_label: 語言
   email_label: 電子郵件
   privacy_link: 隱私政策
+  terms_link: 使用條款
   stores:
     ios: App Store
     android: Google Play
@@ -47,6 +52,7 @@ de:
   language_label: Sprache
   email_label: E-Mail
   privacy_link: Datenschutzerklärung
+  terms_link: Nutzungsbedingungen
   stores:
     ios: App Store
     android: Google Play
@@ -55,6 +61,7 @@ es:
   language_label: Idioma
   email_label: Correo electrónico
   privacy_link: Política de privacidad
+  terms_link: Términos de uso
   stores:
     ios: App Store
     android: Google Play
@@ -63,6 +70,7 @@ fr:
   language_label: Langue
   email_label: E-mail
   privacy_link: Politique de confidentialité
+  terms_link: Conditions d’utilisation
   stores:
     ios: App Store
     android: Google Play
@@ -71,6 +79,7 @@ it:
   language_label: Lingua
   email_label: Email
   privacy_link: Informativa sulla privacy
+  terms_link: Termini di utilizzo
   stores:
     ios: App Store
     android: Google Play
@@ -79,6 +88,7 @@ nl:
   language_label: Taal
   email_label: E-mail
   privacy_link: Privacybeleid
+  terms_link: Gebruiksvoorwaarden
   stores:
     ios: App Store
     android: Google Play
@@ -87,6 +97,7 @@ pt-BR:
   language_label: Idioma
   email_label: E-mail
   privacy_link: Política de Privacidade
+  terms_link: Termos de Uso
   stores:
     ios: App Store
     android: Google Play
@@ -95,6 +106,7 @@ ru:
   language_label: Язык
   email_label: Эл. почта
   privacy_link: Политика конфиденциальности
+  terms_link: Условия использования
   stores:
     ios: App Store
     android: Google Play
@@ -103,6 +115,7 @@ tr:
   language_label: Dil
   email_label: E-posta
   privacy_link: Gizlilik Politikası
+  terms_link: Kullanım Koşulları
   stores:
     ios: App Store
     android: Google Play
