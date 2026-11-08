@@ -6,7 +6,7 @@ permalink: /privacy-policy/en/
 ---
 # folino Privacy Policy
 
-Last updated: October 11, 2026
+Last updated: November 9, 2026
 
 This Privacy Policy describes how folino, the sheet-music app provided by Harmolo (hereinafter referred to as “we” or “our”), handles information on iPhone, iPad, Mac and Android. Harmolo's other apps are covered by the [Harmolo Privacy Policy](https://harmolo.com/privacy-policy/en/).
 

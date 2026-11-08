@@ -6,7 +6,7 @@ permalink: /privacy-policy/ja/
 ---
 # folinoプライバシーポリシー
 
-最終更新日: 2026年10月11日
+最終更新日: 2026年11月9日
 
 本プライバシーポリシーは、Harmolo（以下「当方」）が提供する楽譜アプリfolinoが、iPhone・iPad・Mac・Androidで情報をどのように扱うかを説明するものです。Harmoloのその他のアプリには[Harmoloプライバシーポリシー](https://harmolo.com/privacy-policy/ja/)が適用されます。
 
