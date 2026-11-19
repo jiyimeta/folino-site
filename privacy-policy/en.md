@@ -6,9 +6,9 @@ permalink: /privacy-policy/en/
 ---
 # folino Privacy Policy
 
-Last updated: November 9, 2026
+Last updated: November 19, 2026
 
-This Privacy Policy describes how folino, the sheet-music app provided by Harmolo (hereinafter referred to as “we” or “our”), handles information on iPhone, iPad, Mac and Android. Harmolo's other apps are covered by the [Harmolo Privacy Policy](https://harmolo.com/privacy-policy/en/).
+This Privacy Policy describes how folino, the sheet-music app provided by Harmolo (hereinafter referred to as “we” or “our”), handles information on iPhone, iPad, Mac, Android and Windows. Harmolo's other apps are covered by the [Harmolo Privacy Policy](https://harmolo.com/privacy-policy/en/).
 
 folino works without an account. Reading, playing, editing and annotating scores need no sign-in, and your scores stay on your device unless you sign in. What is described under “Account, Sync and Shared Groups” below happens only if you choose to sign in.
 
@@ -17,11 +17,16 @@ folino works without an account. Reading, playing, editing and annotating scores
 1. **Crash and Diagnostic Data**
    folino collects crash and diagnostic information — such as crash stack traces, a short log of the steps before a problem, and standard device details (device model, OS version, app version) — through a crash-reporting service (Firebase Crashlytics) to improve stability and fix bugs. The service software may also send technical diagnostic signals about its own operation. You can turn crash reporting off in Settings → Privacy. This data is not linked to your identity.
 
+   On Windows, folino does not collect crash and diagnostic data.
+
 2. **Usage Data**
    folino collects usage data, such as screen views, the features used and counts of items, through an analytics service (Google Analytics for Firebase) to improve functionality. The analytics service also records standard context — app and OS version, device model, language, session start and length — together with an identifier for the app installation, and derives an approximate (city-level) location from the network address. No names, e-mail addresses, account identifiers or content (such as titles or files) are sent to the analytics service, and this data is not linked to your identity. You can turn usage analytics off in Settings → Privacy.
 
-3. **Microphone** (Mac)
-   On the Mac, the pitch bar uses the microphone to show the pitch of your voice or instrument in real time. This audio is processed solely on your device. It is never recorded, stored, or transmitted to us or any third party.
+   On Windows, folino sends this usage data to Google Analytics directly. It records the same standard context except the device model, and instead of an approximate location from your network address it sends only the country of your Windows region setting. The same kind of random identifier for the app installation is used, and you can turn usage analytics off in Settings → Privacy.
+   {: #windows-analytics}
+
+3. **Microphone** (Mac, Windows)
+   On the Mac and Windows, the pitch bar uses the microphone to show the pitch of your voice or instrument in real time. This audio is processed solely on your device. It is never recorded, stored, or transmitted to us or any third party.
 
 4. **Account, Sync and Shared Groups** (only if you sign in)
    Signing in is optional and is what enables syncing your library between your devices and sharing with a group. If you sign in, we collect the following, and it is linked to your account:
@@ -32,7 +37,7 @@ folino works without an account. Reading, playing, editing and annotating scores
    - **Shared groups.** Groups are invite-only. What you add to a group — scores and the audio attached to them, the annotations you mark as shared, the group's name and picture — is visible to the group's members, along with your display name and profile photo. Annotations you mark as private are stored with the group but are not shown to other members; the group's administrator has technical access to them so that deleting a group can remove them, and folino never displays them to the administrator.
    - **Activity on shared and synced scores.** While you have a synced or shared score open, your other devices and the members of that group can see that you are viewing or editing it and where your cursor is. This information is removed when you close the score or go offline. While you edit a synced score, a short-lived edit lock carrying your display name is kept so that two people do not edit at the same time.
    - **Device identifier.** A random identifier created for each installation of the app is stored with the activity, edit lock and edit history above, so that your own devices can be told apart. It is not used for advertising or tracking.
-   - **Subscriptions.** Buying folino plus or folino pro is optional and needs a signed-in account; the plan belongs to that account, and creating and editing scores stays free. The App Store (iPhone, iPad, Mac) or Google Play (Android) processes the purchase, and we never receive your payment card or billing details. To apply the plan, the app sends the store’s signed transaction information to our server, which verifies it with the store and keeps a subscription record (the store, the product — plan and period — the subscription’s state, the purchase and expiry dates, and the store’s transaction identifier) together with a purchase token that links the purchase to your account; only the resulting plan (for example “plus”) is written to the account itself, and the app reads only that. The store (Apple) notifies our server of renewals, cancellations and refunds, and our server also checks the subscription’s status with the store periodically, to keep the record current. This data is used only to provide your plan, not for advertising or tracking.
+   - **Subscriptions.** Buying folino plus or folino pro is optional and needs a signed-in account; the plan belongs to that account, and creating and editing scores stays free. The App Store (iPhone, iPad, Mac), Google Play (Android) or the Microsoft Store (Windows) processes the purchase, and we never receive your payment card or billing details. To apply the plan, the app sends the store’s signed transaction information to our server, which verifies it with the store and keeps a subscription record (the store, the product — plan and period — the subscription’s state, the purchase and expiry dates, and the store’s transaction identifier) together with a purchase token that links the purchase to your account; only the resulting plan (for example “plus”) is written to the account itself, and the app reads only that. The store (Apple) notifies our server of renewals, cancellations and refunds, and our server also checks the subscription’s status with the store periodically, to keep the record current. This data is used only to provide your plan, not for advertising or tracking.
    - **Reports and feedback.** If you report a member or a group, or send feedback, your own e-mail app opens a message to us containing the identifiers needed to act on it (for example the group, the member and your account identifier) and your app version, OS version and device model. Nothing is sent unless you send that e-mail.
 
    We use this information only to provide these features: signing in, syncing, sharing with your groups, applying a subscription plan, and handling reports. The data is stored with our cloud provider and is not end-to-end encrypted, so it is accessible to us as the operator of the service; we access it only when needed to operate the service, respond to a report, or comply with the law.
@@ -43,10 +48,11 @@ folino shows no ads. We do not sell personal information, and we do not use it f
 
 We do not share personal information with third parties, except as described in this policy or as required by law. The following providers process data on our behalf:
 
-- **Google (Firebase)** — account sign-in (Firebase Authentication), cloud storage of synced and shared data (Cloud Firestore, Cloud Storage, Realtime Database), server functions, app integrity checks (Firebase App Check), configuration, crash reporting (Firebase Crashlytics) and usage analytics (Google Analytics for Firebase).
+- **Google (Firebase)** — account sign-in (Firebase Authentication), cloud storage of synced and shared data (Cloud Firestore, Cloud Storage, Realtime Database), server functions, app integrity checks (Firebase App Check), configuration, crash reporting (Firebase Crashlytics) and usage analytics (Google Analytics for Firebase; on Windows, Google Analytics).
 - **Cloudflare** — cloud storage of the audio files attached to scores (Cloudflare R2).
 - **Resend** — delivery of sign-in e-mails.
 - **Apple and Google** — when you choose Sign in with Apple or Sign in with Google, that service handles your sign-in under its own privacy policy. When you buy a subscription, the App Store or Google Play also processes the payment under its own terms and privacy policy.
+- **Microsoft** — when you buy a subscription on Windows, the Microsoft Store processes the payment under its own terms and privacy policy.
 - **GitHub** — folino downloads additional instrument sounds from GitHub, which receives standard request information such as your network address.
 
 Content you add to a shared group is, by design, shared with that group's members.
@@ -59,7 +65,8 @@ Your data may be stored and processed in countries other than your own, includin
 - **Usage data** is retained by the analytics service for the retention period we configure, at most 14 months.
 - **Account and synced data** is kept until you delete your account. The history of note edits is deleted automatically about 12 months after each edit. A score you move to Recently Deleted is removed from your other devices, but its server copy is kept until you delete your account. An audio file you remove from a score is deleted from the server about 30 days later, and the audio files of a score you move to Recently Deleted are deleted about 30 days after you move it. We may also remove audio or other content after a rights claim, as described in the [folino Terms of Use](/terms/en/).
 - **Deleting your account.** Settings → Account → Delete Account… deletes your account together with the scores, annotations, edit history, profile and photos stored for it, and removes you from your groups (a group you were the last member of is deleted). Scores you added to a group that continues to exist remain available to its other members, and copies already downloaded to other members' devices cannot be recalled. Data on your own device is not deleted by deleting your account.
-- **Subscription records.** Deleting your folino account does not cancel your subscription with the store; cancel it in the App Store or Google Play subscription settings. When you delete your account, we remove the purchase token and the record’s link to your account. The subscription record itself, without the link to you, is kept as the record of a store purchase, for accounting and refunds and so that Restore Purchases can later re-attach an active subscription to a new account.
+- **Uninstalling folino on Windows** removes what folino keeps in its own storage on that PC, such as your library and settings. If you are signed in, your sign-in is kept in Windows Credential Manager on that PC only and stays there after uninstalling; sign out in folino before uninstalling, or remove it in Credential Manager.
+- **Subscription records.** Deleting your folino account does not cancel your subscription with the store; cancel it in the App Store, Google Play or Microsoft account subscription settings. When you delete your account, we remove the purchase token and the record’s link to your account. The subscription record itself, without the link to you, is kept as the record of a store purchase, for accounting and refunds and so that Restore Purchases can later re-attach an active subscription to a new account.
 - You can also request access to, correction of, or deletion of data associated with your use of folino by contacting us at the e-mail address below.
 
 ## Changes to This Policy
