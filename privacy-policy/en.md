@@ -6,7 +6,7 @@ permalink: /privacy-policy/en/
 ---
 # folino Privacy Policy
 
-Last updated: November 19, 2026
+Last updated: November 20, 2026
 
 This Privacy Policy describes how folino, the sheet-music app provided by Harmolo (hereinafter referred to as “we” or “our”), handles information on iPhone, iPad, Mac, Android and Windows. Harmolo's other apps are covered by the [Harmolo Privacy Policy](https://harmolo.com/privacy-policy/en/).
 
@@ -17,7 +17,9 @@ folino works without an account. Reading, playing, editing and annotating scores
 1. **Crash and Diagnostic Data**
    folino collects crash and diagnostic information — such as crash stack traces, a short log of the steps before a problem, and standard device details (device model, OS version, app version) — through a crash-reporting service (Firebase Crashlytics) to improve stability and fix bugs. The service software may also send technical diagnostic signals about its own operation. You can turn crash reporting off in Settings → Privacy. This data is not linked to your identity.
 
-   On Windows, folino does not collect crash and diagnostic data.
+   On Windows, folino sends this crash and diagnostic information to a crash-reporting service (Sentry) instead. User names in file paths are removed on your device from the messages and logs it includes, and the service is set to mask any that remain before the report is stored. You can turn crash reporting off in Settings → Privacy.
+
+   If you have allowed your device's operating system to share crash reports with app developers, Apple or Microsoft may also provide those reports to us.
 
 2. **Usage Data**
    folino collects usage data, such as screen views, the features used and counts of items, through an analytics service (Google Analytics for Firebase) to improve functionality. The analytics service also records standard context — app and OS version, device model, language, session start and length — together with an identifier for the app installation, and derives an approximate (city-level) location from the network address. No names, e-mail addresses, account identifiers or content (such as titles or files) are sent to the analytics service, and this data is not linked to your identity. You can turn usage analytics off in Settings → Privacy.
@@ -49,6 +51,7 @@ folino shows no ads. We do not sell personal information, and we do not use it f
 We do not share personal information with third parties, except as described in this policy or as required by law. The following providers process data on our behalf:
 
 - **Google (Firebase)** — account sign-in (Firebase Authentication), cloud storage of synced and shared data (Cloud Firestore, Cloud Storage, Realtime Database), server functions, app integrity checks (Firebase App Check), configuration, crash reporting (Firebase Crashlytics) and usage analytics (Google Analytics for Firebase; on Windows, Google Analytics).
+- **Sentry** — crash reporting on Windows.
 - **Cloudflare** — cloud storage of the audio files attached to scores (Cloudflare R2).
 - **Resend** — delivery of sign-in e-mails.
 - **Apple and Google** — when you choose Sign in with Apple or Sign in with Google, that service handles your sign-in under its own privacy policy. When you buy a subscription, the App Store or Google Play also processes the payment under its own terms and privacy policy.
@@ -61,7 +64,7 @@ Your data may be stored and processed in countries other than your own, includin
 
 ## Data Retention and Deletion
 
-- **Crash and diagnostic data** is retained by the crash-reporting service for a limited period and then deleted. Firebase Crashlytics keeps crash data for 90 days before it begins removing it from its live and backup systems.
+- **Crash and diagnostic data** is retained by the crash-reporting service for a limited period and then deleted. Firebase Crashlytics keeps crash data for 90 days before it begins removing it from its live and backup systems. On Windows, Sentry keeps crash data for 30 days.
 - **Usage data** is retained by the analytics service for the retention period we configure, at most 14 months.
 - **Account and synced data** is kept until you delete your account. The history of note edits is deleted automatically about 12 months after each edit. A score you move to Recently Deleted is removed from your other devices, but its server copy is kept until you delete your account. An audio file you remove from a score is deleted from the server about 30 days later, and the audio files of a score you move to Recently Deleted are deleted about 30 days after you move it. We may also remove audio or other content after a rights claim, as described in the [folino Terms of Use](/terms/en/).
 - **Deleting your account.** Settings → Account → Delete Account… deletes your account together with the scores, annotations, edit history, profile and photos stored for it, and removes you from your groups (a group you were the last member of is deleted). Scores you added to a group that continues to exist remain available to its other members, and copies already downloaded to other members' devices cannot be recalled. Data on your own device is not deleted by deleting your account.

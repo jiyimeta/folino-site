@@ -6,7 +6,7 @@ permalink: /privacy-policy/fr/
 ---
 # Politique de confidentialité de folino
 
-Dernière mise à jour : 19 novembre 2026
+Dernière mise à jour : 20 novembre 2026
 
 La présente Politique de confidentialité décrit la manière dont folino, l'application de partitions fournie par Harmolo (ci-après « nous »), traite les informations sur iPhone, iPad, Mac, Android et Windows. Les autres applications de Harmolo sont couvertes par la [Politique de confidentialité de Harmolo](https://harmolo.com/privacy-policy/fr/).
 
@@ -17,7 +17,9 @@ folino fonctionne sans compte. La consultation, la lecture audio, la modificatio
 1. **Données de plantage et de diagnostic**
    folino collecte des informations de plantage et de diagnostic — telles que les traces de pile des plantages, un bref journal des étapes ayant précédé un problème et des données standard sur l'appareil (modèle de l'appareil, version du système d'exploitation, version de l'application) — via un service de rapport de plantage (Firebase Crashlytics) afin d'améliorer la stabilité et de corriger les problèmes. Le logiciel du service peut également envoyer des signaux de diagnostic techniques concernant son propre fonctionnement. Vous pouvez désactiver les rapports de plantage dans « Settings → Privacy » (Réglages → Confidentialité). Ces données ne sont pas associées à votre identité.
 
-   Sous Windows, folino ne collecte pas de données de plantage et de diagnostic.
+   Sous Windows, folino envoie plutôt ces informations de plantage et de diagnostic à un service de rapport de plantage (Sentry). Les noms d'utilisateur figurant dans les chemins de fichiers sont supprimés sur votre appareil des messages et journaux qu'elles contiennent, et le service est configuré pour masquer ceux qui subsistent avant l'enregistrement du rapport. Vous pouvez désactiver les rapports de plantage dans « Settings → Privacy » (Réglages → Confidentialité).
+
+   Si vous avez autorisé le système d'exploitation de votre appareil à partager les rapports de plantage avec les développeurs d'applications, Apple ou Microsoft peuvent également nous fournir ces rapports.
 
 2. **Données d'utilisation**
    folino collecte des données d'utilisation, telles que les vues d'écran, les fonctions utilisées et le nombre d'éléments, via un service d'analyse (Google Analytics for Firebase) afin d'améliorer les fonctionnalités. Le service d'analyse enregistre également des informations de contexte standard — version de l'application et du système d'exploitation, modèle de l'appareil, langue, début et durée de la session — ainsi qu'un identifiant de l'installation de l'application, et déduit une localisation approximative (à l'échelle de la ville) à partir de l'adresse réseau. Aucun nom, aucune adresse e-mail, aucun identifiant de compte ni aucun contenu (comme des titres ou des fichiers) n'est envoyé au service d'analyse, et ces données ne sont pas associées à votre identité. Vous pouvez désactiver l'analyse d'utilisation dans « Settings → Privacy » (Réglages → Confidentialité).
@@ -49,6 +51,7 @@ folino n'affiche aucune publicité. Nous ne vendons pas de renseignements person
 Nous ne communiquons pas de renseignements personnels à des tiers, sauf dans les cas décrits dans la présente Politique ou lorsque la loi l'exige. Les prestataires suivants traitent des données pour notre compte :
 
 - **Google (Firebase)** — connexion au compte (Firebase Authentication), stockage dans le cloud des données synchronisées et partagées (Cloud Firestore, Cloud Storage, Realtime Database), fonctions serveur, vérifications de l'intégrité de l'application (Firebase App Check), configuration, rapports de plantage (Firebase Crashlytics) et analyse d'utilisation (Google Analytics for Firebase ; sous Windows, Google Analytics).
+- **Sentry** — rapports de plantage sous Windows.
 - **Cloudflare** — stockage dans le cloud des fichiers audio joints aux partitions (Cloudflare R2).
 - **Resend** — envoi des e-mails de connexion.
 - **Apple et Google** — lorsque vous choisissez « Se connecter avec Apple » ou « Se connecter avec Google », ce service gère votre connexion conformément à sa propre politique de confidentialité. Lorsque vous souscrivez un abonnement, l'App Store ou Google Play traite en outre le paiement selon ses propres conditions et sa propre politique de confidentialité.
@@ -61,7 +64,7 @@ Vos données peuvent être stockées et traitées dans des pays autres que le v�
 
 ## Conservation et suppression des données
 
-- **Les données de plantage et de diagnostic** sont conservées par le service de rapport de plantage pendant une durée limitée, puis supprimées. Firebase Crashlytics conserve les données de plantage pendant 90 jours avant de commencer à les supprimer de ses systèmes en production et de sauvegarde.
+- **Les données de plantage et de diagnostic** sont conservées par le service de rapport de plantage pendant une durée limitée, puis supprimées. Firebase Crashlytics conserve les données de plantage pendant 90 jours avant de commencer à les supprimer de ses systèmes en production et de sauvegarde. Sous Windows, Sentry conserve les données de plantage pendant 30 jours.
 - **Les données d'utilisation** sont conservées par le service d'analyse pendant la durée de conservation que nous configurons, au maximum 14 mois.
 - **Les données de compte et les données synchronisées** sont conservées jusqu'à ce que vous supprimiez votre compte. L'historique des modifications de notes est supprimé automatiquement environ 12 mois après chaque modification. Une partition que vous déplacez dans « Recently Deleted » (Suppressions récentes) est retirée de vos autres appareils, mais sa copie sur le serveur est conservée jusqu'à ce que vous supprimiez votre compte. Un fichier audio que vous retirez d'une partition est supprimé du serveur environ 30 jours plus tard, et les fichiers audio d'une partition que vous déplacez dans « Recently Deleted » sont supprimés environ 30 jours après ce déplacement. Nous pouvons également retirer des fichiers audio ou d'autres contenus à la suite d'une réclamation d'un titulaire de droits, comme décrit dans les [Conditions d'utilisation de folino](/terms/en/).
 - **Suppression de votre compte.** « Settings → Account → Delete Account… » (Réglages → Compte → Supprimer le compte…) supprime votre compte ainsi que les partitions, annotations, historique des modifications, profil et photos stockés pour celui-ci, et vous retire de vos groupes (un groupe dont vous étiez le dernier membre est supprimé). Les partitions que vous avez ajoutées à un groupe qui continue d'exister restent disponibles pour ses autres membres, et les copies déjà téléchargées sur les appareils d'autres membres ne peuvent pas être retirées. La suppression de votre compte ne supprime pas les données présentes sur votre propre appareil.

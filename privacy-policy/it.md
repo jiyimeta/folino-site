@@ -6,7 +6,7 @@ permalink: /privacy-policy/it/
 ---
 # Informativa sulla privacy di folino
 
-Ultimo aggiornamento: 19 novembre 2026
+Ultimo aggiornamento: 20 novembre 2026
 
 La presente Informativa sulla privacy descrive come folino, l'app per spartiti fornita da Harmolo (di seguito "noi"), tratta le informazioni su iPhone, iPad, Mac, Android e Windows. Le altre app di Harmolo sono disciplinate dall'[Informativa sulla privacy di Harmolo](https://harmolo.com/privacy-policy/it/).
 
@@ -17,7 +17,9 @@ folino funziona senza account. Per leggere, riprodurre, modificare e annotare gl
 1. **Dati di arresto anomalo e diagnostici**
    folino raccoglie informazioni di arresto anomalo e diagnostiche — come le tracce dello stack degli arresti anomali, un breve registro dei passaggi che hanno preceduto un problema e i dati standard del dispositivo (modello del dispositivo, versione del sistema operativo, versione dell'app) — tramite un servizio di segnalazione degli arresti anomali (Firebase Crashlytics) per migliorare la stabilità e correggere i bug. Il software del servizio può inoltre inviare segnali diagnostici tecnici relativi al proprio funzionamento. Puoi disattivare la segnalazione degli arresti anomali in "Settings → Privacy" (Impostazioni → Privacy). Questi dati non sono collegati alla tua identità.
 
-   Su Windows, folino non raccoglie dati di arresto anomalo e diagnostici.
+   Su Windows, folino invia invece queste informazioni di arresto anomalo e diagnostiche a un servizio di segnalazione degli arresti anomali (Sentry). I nomi utente presenti nei percorsi dei file vengono rimossi sul tuo dispositivo dai messaggi e dai registri inclusi, e il servizio è configurato per mascherare quelli rimasti prima che la segnalazione venga memorizzata. Puoi disattivare la segnalazione degli arresti anomali in "Settings → Privacy" (Impostazioni → Privacy).
+
+   Se hai consentito al sistema operativo del tuo dispositivo di condividere le segnalazioni degli arresti anomali con gli sviluppatori di app, anche Apple o Microsoft potrebbero fornirci tali segnalazioni.
 
 2. **Dati di utilizzo**
    folino raccoglie dati di utilizzo, come le visualizzazioni delle schermate, le funzioni utilizzate e il numero di elementi, tramite un servizio di analisi (Google Analytics for Firebase) per migliorare le funzionalità. Il servizio di analisi registra inoltre informazioni di contesto standard — versione dell'app e del sistema operativo, modello del dispositivo, lingua, inizio e durata della sessione — insieme a un identificatore dell'installazione dell'app, e ricava una posizione approssimativa (a livello di città) dall'indirizzo di rete. Al servizio di analisi non vengono inviati nomi, indirizzi e-mail, identificatori dell'account né contenuti (come titoli o file), e questi dati non sono collegati alla tua identità. Puoi disattivare l'analisi dell'utilizzo in "Settings → Privacy" (Impostazioni → Privacy).
@@ -49,6 +51,7 @@ folino non mostra annunci pubblicitari. Non vendiamo dati personali e non li uti
 Non comunichiamo dati personali a terzi, salvo nei casi descritti nella presente Informativa o quando richiesto dalla legge. I seguenti fornitori trattano i dati per nostro conto:
 
 - **Google (Firebase)** — accesso all'account (Firebase Authentication), archiviazione nel cloud dei dati sincronizzati e condivisi (Cloud Firestore, Cloud Storage, Realtime Database), funzioni server, controlli di integrità dell'app (Firebase App Check), configurazione, segnalazione degli arresti anomali (Firebase Crashlytics) e analisi dell'utilizzo (Google Analytics for Firebase; su Windows, Google Analytics).
+- **Sentry** — segnalazione degli arresti anomali su Windows.
 - **Cloudflare** — archiviazione nel cloud dei file audio allegati agli spartiti (Cloudflare R2).
 - **Resend** — invio delle e-mail di accesso.
 - **Apple e Google** — quando scegli "Accedi con Apple" o "Accedi con Google", tale servizio gestisce il tuo accesso in base alla propria informativa sulla privacy. Quando acquisti un abbonamento, l'App Store o Google Play elabora inoltre il pagamento in base ai propri termini e alla propria informativa sulla privacy.
@@ -61,7 +64,7 @@ I tuoi dati possono essere memorizzati e trattati in paesi diversi dal tuo, tra 
 
 ## Conservazione ed eliminazione dei dati
 
-- **I dati di arresto anomalo e diagnostici** sono conservati dal servizio di segnalazione degli arresti anomali per un periodo limitato e successivamente eliminati. Firebase Crashlytics conserva i dati sugli arresti anomali per 90 giorni prima di iniziare a rimuoverli dai propri sistemi attivi e di backup.
+- **I dati di arresto anomalo e diagnostici** sono conservati dal servizio di segnalazione degli arresti anomali per un periodo limitato e successivamente eliminati. Firebase Crashlytics conserva i dati sugli arresti anomali per 90 giorni prima di iniziare a rimuoverli dai propri sistemi attivi e di backup. Su Windows, Sentry conserva i dati sugli arresti anomali per 30 giorni.
 - **I dati di utilizzo** sono conservati dal servizio di analisi per il periodo di conservazione da noi configurato, al massimo 14 mesi.
 - **I dati dell'account e i dati sincronizzati** sono conservati fino all'eliminazione del tuo account. La cronologia delle modifiche alle note viene eliminata automaticamente circa 12 mesi dopo ciascuna modifica. Uno spartito che sposti in "Recently Deleted" (Eliminati di recente) viene rimosso dagli altri tuoi dispositivi, ma la sua copia sul server viene conservata fino all'eliminazione del tuo account. Un file audio che rimuovi da uno spartito viene eliminato dal server circa 30 giorni dopo, e i file audio di uno spartito che sposti in "Recently Deleted" vengono eliminati circa 30 giorni dopo lo spostamento. Potremmo inoltre rimuovere file audio o altri contenuti a seguito di una segnalazione di violazione dei diritti, come descritto nei [Termini di utilizzo di folino](/terms/en/).
 - **Eliminazione dell'account.** "Settings → Account → Delete Account…" (Impostazioni → Account → Elimina account…) elimina il tuo account insieme agli spartiti, alle annotazioni, alla cronologia delle modifiche, al profilo e alle foto memorizzati per esso, e ti rimuove dai tuoi gruppi (un gruppo di cui eri l'ultimo membro viene eliminato). Gli spartiti che hai aggiunto a un gruppo che continua a esistere restano disponibili per gli altri membri di quel gruppo, e le copie già scaricate sui dispositivi di altri membri non possono essere ritirate. L'eliminazione dell'account non elimina i dati presenti sul tuo dispositivo.

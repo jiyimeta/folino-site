@@ -6,7 +6,7 @@ permalink: /privacy-policy/nl/
 ---
 # Privacybeleid van folino
 
-Laatst bijgewerkt: 19 november 2026
+Laatst bijgewerkt: 20 november 2026
 
 Dit Privacybeleid beschrijft hoe folino, de bladmuziekapp die door Harmolo (hierna "wij" of "ons") wordt aangeboden, informatie verwerkt op iPhone, iPad, Mac, Android en Windows. Op de andere apps van Harmolo is het [Privacybeleid van Harmolo](https://harmolo.com/privacy-policy/nl/) van toepassing.
 
@@ -17,7 +17,9 @@ folino werkt zonder account. Voor het lezen, afspelen, bewerken en annoteren van
 1. **Crash- en diagnostische gegevens**
    folino verzamelt crash- en diagnostische informatie — zoals crash-stacktraces, een kort logboek van de stappen voorafgaand aan een probleem en standaard apparaatgegevens (apparaatmodel, versie van het besturingssysteem, app-versie) — via een crashrapportagedienst (Firebase Crashlytics) om de stabiliteit te verbeteren en fouten op te lossen. De software van de dienst kan ook technische diagnostische signalen over haar eigen werking verzenden. Je kunt crashrapportage uitschakelen in "Settings → Privacy" (Instellingen → Privacy). Deze gegevens worden niet gekoppeld aan je identiteit.
 
-   Op Windows verzamelt folino geen crash- en diagnostische gegevens.
+   Op Windows verzendt folino deze crash- en diagnostische informatie in plaats daarvan naar een crashrapportagedienst (Sentry). Gebruikersnamen in bestandspaden worden op je apparaat verwijderd uit de berichten en logboeken die erin zitten, en de dienst is zo ingesteld dat resterende gebruikersnamen worden gemaskeerd voordat het rapport wordt opgeslagen. Je kunt crashrapportage uitschakelen in "Settings → Privacy" (Instellingen → Privacy).
+
+   Als je in het besturingssysteem van je apparaat hebt toegestaan dat crashrapporten met app-ontwikkelaars worden gedeeld, kunnen Apple of Microsoft ons die rapporten ook verstrekken.
 
 2. **Gebruiksgegevens**
    folino verzamelt gebruiksgegevens, zoals schermweergaven, de gebruikte functies en aantallen items, via een analysedienst (Google Analytics for Firebase) om de functionaliteit te verbeteren. De analysedienst registreert ook standaard contextgegevens — app- en besturingssysteemversie, apparaatmodel, taal, begin en duur van de sessie — samen met een ID voor de app-installatie, en leidt uit het netwerkadres een geschatte locatie (op stadsniveau) af. Er worden geen namen, e-mailadressen, account-ID's of inhoud (zoals titels of bestanden) naar de analysedienst verzonden, en deze gegevens worden niet gekoppeld aan je identiteit. Je kunt gebruiksanalyse uitschakelen in "Settings → Privacy" (Instellingen → Privacy).
@@ -49,6 +51,7 @@ folino toont geen advertenties. Wij verkopen geen persoonsgegevens en gebruiken 
 Wij verstrekken geen persoonsgegevens aan derden, behalve zoals beschreven in dit beleid of wanneer de wet dit vereist. De volgende dienstverleners verwerken gegevens namens ons:
 
 - **Google (Firebase)** — accountaanmelding (Firebase Authentication), cloudopslag van gesynchroniseerde en gedeelde gegevens (Cloud Firestore, Cloud Storage, Realtime Database), serverfuncties, integriteitscontroles van de app (Firebase App Check), configuratie, crashrapportage (Firebase Crashlytics) en gebruiksanalyse (Google Analytics for Firebase; op Windows Google Analytics).
+- **Sentry** — crashrapportage op Windows.
 - **Cloudflare** — cloudopslag van de audiobestanden die aan partituren zijn gekoppeld (Cloudflare R2).
 - **Resend** — bezorging van inlog-e-mails.
 - **Apple en Google** — wanneer je kiest voor "Log in met Apple" of "Inloggen met Google", handelt die dienst je aanmelding af onder zijn eigen privacybeleid. Wanneer je een abonnement koopt, verwerkt de App Store of Google Play bovendien de betaling onder eigen voorwaarden en eigen privacybeleid.
@@ -61,7 +64,7 @@ Je gegevens kunnen worden opgeslagen en verwerkt in andere landen dan je eigen l
 
 ## Bewaring en verwijdering van gegevens
 
-- **Crash- en diagnostische gegevens** worden gedurende een beperkte periode door de crashrapportagedienst bewaard en daarna verwijderd. Firebase Crashlytics bewaart crashgegevens 90 dagen voordat het begint met het verwijderen ervan uit zijn live- en back-upsystemen.
+- **Crash- en diagnostische gegevens** worden gedurende een beperkte periode door de crashrapportagedienst bewaard en daarna verwijderd. Firebase Crashlytics bewaart crashgegevens 90 dagen voordat het begint met het verwijderen ervan uit zijn live- en back-upsystemen. Op Windows bewaart Sentry crashgegevens 30 dagen.
 - **Gebruiksgegevens** worden door de analysedienst bewaard gedurende de bewaartermijn die wij instellen, maximaal 14 maanden.
 - **Account- en gesynchroniseerde gegevens** worden bewaard totdat je je account verwijdert. De geschiedenis van nootbewerkingen wordt ongeveer 12 maanden na elke bewerking automatisch verwijderd. Een partituur die je naar "Recently Deleted" (Recent verwijderd) verplaatst, wordt van je andere apparaten verwijderd, maar de kopie op de server blijft bewaard totdat je je account verwijdert. Een audiobestand dat je van een partituur loskoppelt, wordt ongeveer 30 dagen later van de server verwijderd, en de audiobestanden van een partituur die je naar "Recently Deleted" verplaatst, worden ongeveer 30 dagen na het verplaatsen verwijderd. Wij kunnen audio of andere inhoud ook verwijderen naar aanleiding van een melding van inbreuk op rechten, zoals beschreven in de [Gebruiksvoorwaarden van folino](/terms/en/).
 - **Je account verwijderen.** "Settings → Account → Delete Account…" (Instellingen → Account → Account verwijderen…) verwijdert je account samen met de partituren, annotaties, bewerkingsgeschiedenis, het profiel en de foto's die ervoor zijn opgeslagen, en verwijdert je uit je groepen (een groep waarvan je het laatste lid was, wordt verwijderd). Partituren die je hebt toegevoegd aan een groep die blijft bestaan, blijven beschikbaar voor de andere leden van die groep, en kopieën die al naar de apparaten van andere leden zijn gedownload, kunnen niet worden teruggehaald. Gegevens op je eigen apparaat worden niet verwijderd door je account te verwijderen.

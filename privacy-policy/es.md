@@ -6,7 +6,7 @@ permalink: /privacy-policy/es/
 ---
 # Política de privacidad de folino
 
-Última actualización: 19 de noviembre de 2026
+Última actualización: 20 de noviembre de 2026
 
 Esta Política de privacidad describe cómo folino, la aplicación de partituras proporcionada por Harmolo (en adelante, «nosotros»), gestiona la información en iPhone, iPad, Mac, Android y Windows. Las demás aplicaciones de Harmolo se rigen por la [Política de privacidad de Harmolo](https://harmolo.com/privacy-policy/es/).
 
@@ -17,7 +17,9 @@ folino funciona sin cuenta. Leer, reproducir, editar y anotar partituras no requ
 1. **Datos de fallos y diagnóstico**
    folino recopila información de fallos y diagnóstico —como los seguimientos de pila de los fallos, un breve registro de los pasos previos a un problema y datos estándar del dispositivo (modelo del dispositivo, versión del sistema operativo, versión de la aplicación)— mediante un servicio de informes de fallos (Firebase Crashlytics) para mejorar la estabilidad y corregir errores. El software del servicio también puede enviar señales técnicas de diagnóstico sobre su propio funcionamiento. Puede desactivar los informes de fallos en «Settings → Privacy» (Ajustes → Privacidad). Estos datos no se vinculan a su identidad.
 
-   En Windows, folino no recopila datos de fallos y diagnóstico.
+   En Windows, folino envía en su lugar esta información de fallos y diagnóstico a un servicio de informes de fallos (Sentry). Los nombres de usuario que aparecen en las rutas de archivo se eliminan en su dispositivo de los mensajes y registros que incluye, y el servicio está configurado para ocultar los que queden antes de almacenar el informe. Puede desactivar los informes de fallos en «Settings → Privacy» (Ajustes → Privacidad).
+
+   Si ha permitido que el sistema operativo de su dispositivo comparta informes de fallos con los desarrolladores de aplicaciones, Apple o Microsoft también pueden proporcionarnos esos informes.
 
 2. **Datos de uso**
    folino recopila datos de uso, como las vistas de pantalla, las funciones utilizadas y el número de elementos, mediante un servicio de analítica (Google Analytics for Firebase) para mejorar la funcionalidad. El servicio de analítica también registra información de contexto estándar —versión de la aplicación y del sistema operativo, modelo del dispositivo, idioma, inicio y duración de la sesión— junto con un identificador de la instalación de la aplicación, y deduce una ubicación aproximada (a nivel de ciudad) a partir de la dirección de red. No se envían al servicio de analítica nombres, direcciones de correo electrónico, identificadores de cuenta ni contenido (como títulos o archivos), y estos datos no se vinculan a su identidad. Puede desactivar la analítica de uso en «Settings → Privacy» (Ajustes → Privacidad).
@@ -49,6 +51,7 @@ folino no muestra anuncios. No vendemos información personal ni la utilizamos p
 No compartimos información personal con terceros, salvo en los casos descritos en esta Política o cuando la ley lo exija. Los siguientes proveedores procesan datos en nuestro nombre:
 
 - **Google (Firebase)** — inicio de sesión en la cuenta (Firebase Authentication), almacenamiento en la nube de los datos sincronizados y compartidos (Cloud Firestore, Cloud Storage, Realtime Database), funciones de servidor, comprobaciones de integridad de la aplicación (Firebase App Check), configuración, informes de fallos (Firebase Crashlytics) y analítica de uso (Google Analytics for Firebase; en Windows, Google Analytics).
+- **Sentry** — informes de fallos en Windows.
 - **Cloudflare** — almacenamiento en la nube de los archivos de audio adjuntos a las partituras (Cloudflare R2).
 - **Resend** — envío de los correos electrónicos de inicio de sesión.
 - **Apple y Google** — cuando elige «Iniciar sesión con Apple» o «Iniciar sesión con Google», ese servicio gestiona su inicio de sesión conforme a su propia política de privacidad. Cuando compra una suscripción, App Store o Google Play procesa además el pago conforme a sus propios términos y su propia política de privacidad.
@@ -61,7 +64,7 @@ Sus datos pueden almacenarse y procesarse en países distintos del suyo, incluid
 
 ## Conservación y eliminación de datos
 
-- **Los datos de fallos y diagnóstico** se conservan en el servicio de informes de fallos durante un período limitado y luego se eliminan. Firebase Crashlytics conserva los datos de fallos durante 90 días antes de comenzar a eliminarlos de sus sistemas en producción y de copia de seguridad.
+- **Los datos de fallos y diagnóstico** se conservan en el servicio de informes de fallos durante un período limitado y luego se eliminan. Firebase Crashlytics conserva los datos de fallos durante 90 días antes de comenzar a eliminarlos de sus sistemas en producción y de copia de seguridad. En Windows, Sentry conserva los datos de fallos durante 30 días.
 - **Los datos de uso** se conservan en el servicio de analítica durante el período de conservación que configuramos, como máximo 14 meses.
 - **Los datos de la cuenta y los datos sincronizados** se conservan hasta que elimine su cuenta. El historial de ediciones de notas se elimina automáticamente unos 12 meses después de cada edición. Una partitura que mueva a «Recently Deleted» (Eliminado recientemente) se quita de sus otros dispositivos, pero su copia en el servidor se conserva hasta que elimine su cuenta. Un archivo de audio que quite de una partitura se elimina del servidor unos 30 días después, y los archivos de audio de una partitura que mueva a «Recently Deleted» se eliminan unos 30 días después de moverla. También podemos retirar archivos de audio u otro contenido tras una reclamación por infracción de derechos, como se describe en los [Términos de uso de folino](/terms/en/).
 - **Eliminación de su cuenta.** «Settings → Account → Delete Account…» (Ajustes → Cuenta → Eliminar cuenta…) elimina su cuenta junto con las partituras, anotaciones, historial de ediciones, perfil y fotos almacenados para ella, y le retira de sus grupos (un grupo del que usted era el último miembro se elimina). Las partituras que haya añadido a un grupo que siga existiendo permanecen disponibles para sus demás miembros, y las copias ya descargadas en los dispositivos de otros miembros no pueden retirarse. Eliminar su cuenta no elimina los datos de su propio dispositivo.

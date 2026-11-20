@@ -6,7 +6,7 @@ permalink: /privacy-policy/tr/
 ---
 # folino Gizlilik Politikası
 
-Son güncelleme: 19 Kasım 2026
+Son güncelleme: 20 Kasım 2026
 
 Bu Gizlilik Politikası, Harmolo (bundan böyle "biz") tarafından sağlanan nota uygulaması folino'nun iPhone, iPad, Mac, Android ve Windows'ta bilgileri nasıl işlediğini açıklar. Harmolo'nun diğer uygulamaları [Harmolo Gizlilik Politikası](https://harmolo.com/privacy-policy/tr/) kapsamındadır.
 
@@ -17,7 +17,9 @@ folino hesap olmadan çalışır. Partisyonları görüntülemek, oynatmak, düz
 1. **Çökme ve Tanılama Verileri**
    folino, kararlılığı artırmak ve hataları gidermek amacıyla bir çökme raporlama hizmeti (Firebase Crashlytics) aracılığıyla çökme ve tanılama bilgilerini —çökme yığın izleri, bir sorundan önceki adımların kısa bir kaydı ve standart cihaz bilgileri (cihaz modeli, işletim sistemi sürümü, uygulama sürümü) gibi— toplar. Hizmetin yazılımı, kendi çalışmasına ilişkin teknik tanılama sinyalleri de gönderebilir. Çökme raporlamayı "Settings → Privacy" (Ayarlar → Gizlilik) bölümünden kapatabilirsiniz. Bu veriler kimliğinizle ilişkilendirilmez.
 
-   Windows'ta folino, çökme ve tanılama verilerini toplamaz.
+   Windows'ta folino bu çökme ve tanılama bilgilerini bunun yerine bir çökme raporlama hizmetine (Sentry) gönderir. Dosya yollarındaki kullanıcı adları, içerdiği iletilerden ve günlüklerden cihazınızda kaldırılır; hizmet de kalan kullanıcı adlarını rapor saklanmadan önce maskeleyecek şekilde ayarlanmıştır. Çökme raporlamayı "Settings → Privacy" (Ayarlar → Gizlilik) bölümünden kapatabilirsiniz.
+
+   Cihazınızın işletim sisteminde çökme raporlarının uygulama geliştiricileriyle paylaşılmasına izin verdiyseniz, Apple veya Microsoft bu raporları bize de sağlayabilir.
 
 2. **Kullanım Verileri**
    folino, işlevselliği geliştirmek için bir analiz hizmeti (Google Analytics for Firebase) aracılığıyla ekran görüntülemeleri, kullanılan özellikler ve öğe sayıları gibi kullanım verilerini toplar. Analiz hizmeti ayrıca uygulama ve işletim sistemi sürümü, cihaz modeli, dil, oturumun başlangıcı ve süresi gibi standart bağlam bilgilerini uygulama kurulumuna ait bir tanımlayıcıyla birlikte kaydeder ve ağ adresinden yaklaşık bir konum (şehir düzeyinde) çıkarır. Analiz hizmetine hiçbir ad, e-posta adresi, hesap tanımlayıcısı veya içerik (başlıklar ya da dosyalar gibi) gönderilmez ve bu veriler kimliğinizle ilişkilendirilmez. Kullanım analizini "Settings → Privacy" (Ayarlar → Gizlilik) bölümünden kapatabilirsiniz.
@@ -49,6 +51,7 @@ folino reklam göstermez. Kişisel bilgileri satmayız ve diğer şirketlerin uy
 Bu politikada açıklanan durumlar veya yasaların gerektirdiği durumlar dışında, kişisel bilgileri üçüncü taraflarla paylaşmayız. Aşağıdaki sağlayıcılar verileri bizim adımıza işler:
 
 - **Google (Firebase)** — hesapla oturum açma (Firebase Authentication), eşzamanlanan ve paylaşılan verilerin bulutta saklanması (Cloud Firestore, Cloud Storage, Realtime Database), sunucu işlevleri, uygulama bütünlüğü denetimleri (Firebase App Check), yapılandırma, çökme raporlama (Firebase Crashlytics) ve kullanım analizi (Google Analytics for Firebase; Windows'ta Google Analytics).
+- **Sentry** — Windows'ta çökme raporlama.
 - **Cloudflare** — partisyonlara eklenen ses dosyalarının bulutta saklanması (Cloudflare R2).
 - **Resend** — oturum açma e-postalarının teslimi.
 - **Apple ve Google** — "Apple ile Giriş Yap" veya "Sign in with Google" seçeneğini seçtiğinizde, oturum açma işleminiz ilgili hizmet tarafından kendi gizlilik politikası kapsamında gerçekleştirilir. Bir abonelik satın aldığınızda, ödemeyi ayrıca App Store veya Google Play kendi koşulları ve gizlilik politikası kapsamında işler.
@@ -61,7 +64,7 @@ Verileriniz, Japonya, Singapur ve Amerika Birleşik Devletleri dahil olmak üzer
 
 ## Verilerin Saklanması ve Silinmesi
 
-- **Çökme ve tanılama verileri**, çökme raporlama hizmeti tarafından sınırlı bir süre saklanır ve ardından silinir. Firebase Crashlytics, çökme verilerini 90 gün boyunca saklar ve ardından bunları canlı ve yedek sistemlerinden kaldırmaya başlar.
+- **Çökme ve tanılama verileri**, çökme raporlama hizmeti tarafından sınırlı bir süre saklanır ve ardından silinir. Firebase Crashlytics, çökme verilerini 90 gün boyunca saklar ve ardından bunları canlı ve yedek sistemlerinden kaldırmaya başlar. Windows'ta Sentry, çökme verilerini 30 gün boyunca saklar.
 - **Kullanım verileri**, analiz hizmeti tarafından bizim yapılandırdığımız saklama süresi boyunca, en fazla 14 ay saklanır.
 - **Hesap ve eşzamanlanan veriler**, hesabınızı silene kadar saklanır. Nota düzenlemelerinin geçmişi, her düzenlemeden yaklaşık 12 ay sonra otomatik olarak silinir. "Recently Deleted" (Son Silinenler) bölümüne taşıdığınız bir partisyon diğer cihazlarınızdan kaldırılır, ancak sunucudaki kopyası hesabınızı silene kadar saklanır. Bir partisyondan kaldırdığınız ses dosyası yaklaşık 30 gün sonra sunucudan silinir; "Recently Deleted" bölümüne taşıdığınız bir partisyonun ses dosyaları ise taşıma tarihinden yaklaşık 30 gün sonra silinir. Ayrıca, [folino Kullanım Koşulları](/terms/en/)'nda açıklandığı üzere, bir hak ihlali bildirimi üzerine ses veya diğer içerikleri kaldırabiliriz.
 - **Hesabınızı silme.** "Settings → Account → Delete Account…" (Ayarlar → Hesap → Hesabı Sil…) işlemi, hesabınızı onun için saklanan partisyonlar, ek açıklamalar, düzenleme geçmişi, profil ve fotoğraflarla birlikte siler ve sizi gruplarınızdan çıkarır (son üyesi olduğunuz bir grup silinir). Varlığını sürdüren bir gruba eklediğiniz partisyonlar, grubun diğer üyeleri için kullanılabilir olmaya devam eder ve diğer üyelerin cihazlarına önceden indirilmiş kopyalar geri alınamaz. Hesabınızı silmek, kendi cihazınızdaki verileri silmez.

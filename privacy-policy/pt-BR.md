@@ -6,7 +6,7 @@ permalink: /privacy-policy/pt-BR/
 ---
 # Política de Privacidade do folino
 
-Última atualização: 19 de novembro de 2026
+Última atualização: 20 de novembro de 2026
 
 Esta Política de Privacidade descreve como o folino, o aplicativo de partituras fornecido pela Harmolo (doravante "nós"), trata as informações no iPhone, iPad, Mac, Android e Windows. Os demais aplicativos da Harmolo são regidos pela [Política de Privacidade da Harmolo](https://harmolo.com/privacy-policy/pt-BR/).
 
@@ -17,7 +17,9 @@ O folino funciona sem conta. Ler, reproduzir, editar e anotar partituras não ex
 1. **Dados de falha e diagnóstico**
    O folino coleta informações de falha e diagnóstico — como rastreamentos de pilha das falhas, um breve registro das etapas anteriores a um problema e dados padrão do dispositivo (modelo do dispositivo, versão do sistema operacional, versão do aplicativo) — por meio de um serviço de relatório de falhas (Firebase Crashlytics) para melhorar a estabilidade e corrigir problemas. O software do serviço também pode enviar sinais técnicos de diagnóstico sobre o próprio funcionamento. Você pode desativar os relatórios de falha em "Settings → Privacy" (Configurações → Privacidade). Esses dados não são vinculados à sua identidade.
 
-   No Windows, o folino não coleta dados de falha e diagnóstico.
+   No Windows, o folino envia essas informações de falha e diagnóstico a um serviço de relatório de falhas (Sentry). Os nomes de usuário nos caminhos de arquivo são removidos no seu dispositivo das mensagens e registros incluídos, e o serviço está configurado para ocultar os que restarem antes de o relatório ser armazenado. Você pode desativar os relatórios de falha em "Settings → Privacy" (Configurações → Privacidade).
+
+   Se você permitiu que o sistema operacional do seu dispositivo compartilhe relatórios de falha com desenvolvedores de aplicativos, a Apple ou a Microsoft também podem nos fornecer esses relatórios.
 
 2. **Dados de uso**
    O folino coleta dados de uso, como visualizações de tela, os recursos usados e contagens de itens, por meio de um serviço de análise (Google Analytics for Firebase) para melhorar a funcionalidade. O serviço de análise também registra informações de contexto padrão — versão do aplicativo e do sistema operacional, modelo do dispositivo, idioma, início e duração da sessão — junto com um identificador da instalação do aplicativo, e deduz uma localização aproximada (em nível de cidade) a partir do endereço de rede. Nenhum nome, endereço de e-mail, identificador de conta ou conteúdo (como títulos ou arquivos) é enviado ao serviço de análise, e esses dados não são vinculados à sua identidade. Você pode desativar a análise de uso em "Settings → Privacy" (Configurações → Privacidade).
@@ -49,6 +51,7 @@ O folino não exibe anúncios. Não vendemos informações pessoais nem as usamo
 Não compartilhamos informações pessoais com terceiros, exceto conforme descrito nesta Política ou quando exigido por lei. Os seguintes prestadores tratam dados em nosso nome:
 
 - **Google (Firebase)** — login na conta (Firebase Authentication), armazenamento em nuvem de dados sincronizados e compartilhados (Cloud Firestore, Cloud Storage, Realtime Database), funções de servidor, verificações de integridade do aplicativo (Firebase App Check), configuração, relatórios de falha (Firebase Crashlytics) e análise de uso (Google Analytics for Firebase; no Windows, Google Analytics).
+- **Sentry** — relatórios de falha no Windows.
 - **Cloudflare** — armazenamento em nuvem dos arquivos de áudio anexados às partituras (Cloudflare R2).
 - **Resend** — envio dos e-mails de login.
 - **Apple e Google** — quando você escolhe "Iniciar Sessão com a Apple" ou "Fazer login com o Google", esse serviço cuida do seu login de acordo com a própria política de privacidade. Quando você compra uma assinatura, a App Store ou o Google Play também processa o pagamento de acordo com seus próprios termos e sua própria política de privacidade.
@@ -61,7 +64,7 @@ Seus dados podem ser armazenados e tratados em países diferentes do seu, inclui
 
 ## Retenção e exclusão de dados
 
-- **Os dados de falha e diagnóstico** são retidos pelo serviço de relatório de falhas por um período limitado e depois excluídos. O Firebase Crashlytics mantém os dados de falha por 90 dias antes de começar a removê-los de seus sistemas ativos e de backup.
+- **Os dados de falha e diagnóstico** são retidos pelo serviço de relatório de falhas por um período limitado e depois excluídos. O Firebase Crashlytics mantém os dados de falha por 90 dias antes de começar a removê-los de seus sistemas ativos e de backup. No Windows, o Sentry mantém os dados de falha por 30 dias.
 - **Os dados de uso** são retidos pelo serviço de análise pelo período de retenção que configuramos, de no máximo 14 meses.
 - **Os dados da conta e os dados sincronizados** são mantidos até que você exclua sua conta. O histórico de edições de notas é excluído automaticamente cerca de 12 meses após cada edição. Uma partitura que você move para "Recently Deleted" (Excluídos recentemente) é removida dos seus outros dispositivos, mas a cópia dela no servidor é mantida até que você exclua sua conta. Um arquivo de áudio que você remove de uma partitura é excluído do servidor cerca de 30 dias depois, e os arquivos de áudio de uma partitura que você move para "Recently Deleted" são excluídos cerca de 30 dias depois que você a move. Também podemos remover áudio ou outro conteúdo após uma notificação de violação de direitos, conforme descrito nos [Termos de Uso do folino](/terms/en/).
 - **Exclusão da conta.** "Settings → Account → Delete Account…" (Configurações → Conta → Excluir conta…) exclui sua conta junto com as partituras, anotações, histórico de edições, perfil e fotos armazenados para ela, e remove você dos seus grupos (um grupo do qual você era o último membro é excluído). As partituras que você adicionou a um grupo que continua existindo permanecem disponíveis para os outros membros desse grupo, e as cópias já baixadas para os dispositivos de outros membros não podem ser retiradas. Os dados no seu próprio dispositivo não são excluídos quando você exclui sua conta.

@@ -6,7 +6,7 @@ permalink: /privacy-policy/de/
 ---
 # folino Datenschutzerklärung
 
-Zuletzt aktualisiert: 19. November 2026
+Zuletzt aktualisiert: 20. November 2026
 
 Diese Datenschutzerklärung beschreibt, wie folino, die von Harmolo (nachfolgend „wir“ oder „uns“) bereitgestellte Noten-App, Informationen auf iPhone, iPad, Mac, Android und Windows verarbeitet. Für die anderen Apps von Harmolo gilt die [Datenschutzerklärung von Harmolo](https://harmolo.com/privacy-policy/de/).
 
@@ -17,7 +17,9 @@ folino funktioniert ohne Konto. Das Lesen, Abspielen und Bearbeiten von Partitur
 1. **Absturz- und Diagnosedaten**
    folino erfasst Absturz- und Diagnoseinformationen – etwa Absturz-Stacktraces, ein kurzes Protokoll der Schritte vor einem Problem und standardmäßige Geräteangaben (Gerätemodell, Betriebssystemversion, App-Version) – über einen Absturzberichtsdienst (Firebase Crashlytics), um die Stabilität zu verbessern und Fehler zu beheben. Die Software des Dienstes kann zudem technische Diagnosesignale über ihren eigenen Betrieb senden. Sie können Absturzberichte unter „Settings → Privacy“ (Einstellungen → Datenschutz) deaktivieren. Diese Daten werden nicht mit Ihrer Identität verknüpft.
 
-   Unter Windows erfasst folino keine Absturz- und Diagnosedaten.
+   Unter Windows sendet folino diese Absturz- und Diagnoseinformationen stattdessen an einen Absturzberichtsdienst (Sentry). Benutzernamen in Dateipfaden werden auf Ihrem Gerät aus den enthaltenen Meldungen und Protokollen entfernt, und der Dienst ist so eingestellt, dass er verbleibende Benutzernamen maskiert, bevor der Bericht gespeichert wird. Sie können Absturzberichte unter „Settings → Privacy“ (Einstellungen → Datenschutz) deaktivieren.
+
+   Wenn Sie im Betriebssystem Ihres Geräts erlaubt haben, Absturzberichte mit App-Entwicklern zu teilen, können Apple oder Microsoft uns diese Berichte ebenfalls zur Verfügung stellen.
 
 2. **Nutzungsdaten**
    folino erfasst Nutzungsdaten wie Bildschirmaufrufe, die verwendeten Funktionen und die Anzahl von Elementen über einen Analysedienst (Google Analytics for Firebase), um die Funktionalität zu verbessern. Der Analysedienst erfasst außerdem standardmäßige Kontextangaben – App- und Betriebssystemversion, Gerätemodell, Sprache, Beginn und Dauer der Sitzung – zusammen mit einer Kennung für die App-Installation und leitet aus der Netzwerkadresse einen ungefähren Standort (auf Stadtebene) ab. Es werden keine Namen, E-Mail-Adressen, Kontokennungen oder Inhalte (etwa Titel oder Dateien) an den Analysedienst gesendet, und diese Daten werden nicht mit Ihrer Identität verknüpft. Sie können die Nutzungsanalyse unter „Settings → Privacy“ (Einstellungen → Datenschutz) deaktivieren.
@@ -49,6 +51,7 @@ folino zeigt keine Werbung an. Wir verkaufen keine personenbezogenen Daten und v
 Wir geben personenbezogene Daten nicht an Dritte weiter, außer wie in dieser Erklärung beschrieben oder wenn dies gesetzlich vorgeschrieben ist. Die folgenden Dienstleister verarbeiten Daten in unserem Auftrag:
 
 - **Google (Firebase)** – Kontoanmeldung (Firebase Authentication), Cloud-Speicherung synchronisierter und geteilter Daten (Cloud Firestore, Cloud Storage, Realtime Database), Serverfunktionen, Integritätsprüfungen der App (Firebase App Check), Konfiguration, Absturzberichte (Firebase Crashlytics) und Nutzungsanalyse (Google Analytics for Firebase; unter Windows Google Analytics).
+- **Sentry** – Absturzberichte unter Windows.
 - **Cloudflare** – Cloud-Speicherung der an Partituren angehängten Audiodateien (Cloudflare R2).
 - **Resend** – Zustellung von Anmelde-E-Mails.
 - **Apple und Google** – wenn Sie „Mit Apple anmelden“ oder „Über Google anmelden“ wählen, wickelt dieser Dienst Ihre Anmeldung gemäß seiner eigenen Datenschutzerklärung ab. Wenn Sie ein Abonnement kaufen, wickelt außerdem der App Store bzw. Google Play die Zahlung nach den jeweils eigenen Bedingungen und der jeweils eigenen Datenschutzerklärung ab.
@@ -61,7 +64,7 @@ Ihre Daten können in anderen Ländern als Ihrem eigenen gespeichert und verarbe
 
 ## Aufbewahrung und Löschung von Daten
 
-- **Absturz- und Diagnosedaten** werden vom Absturzberichtsdienst für einen begrenzten Zeitraum aufbewahrt und anschließend gelöscht. Firebase Crashlytics bewahrt Absturzdaten 90 Tage lang auf, bevor mit deren Entfernung aus den Live- und Backup-Systemen begonnen wird.
+- **Absturz- und Diagnosedaten** werden vom Absturzberichtsdienst für einen begrenzten Zeitraum aufbewahrt und anschließend gelöscht. Firebase Crashlytics bewahrt Absturzdaten 90 Tage lang auf, bevor mit deren Entfernung aus den Live- und Backup-Systemen begonnen wird. Unter Windows bewahrt Sentry Absturzdaten 30 Tage lang auf.
 - **Nutzungsdaten** werden vom Analysedienst für den von uns festgelegten Aufbewahrungszeitraum aufbewahrt, höchstens 14 Monate.
 - **Konto- und synchronisierte Daten** werden aufbewahrt, bis Sie Ihr Konto löschen. Der Verlauf der Notenbearbeitungen wird etwa 12 Monate nach der jeweiligen Bearbeitung automatisch gelöscht. Eine Partitur, die Sie nach „Recently Deleted“ (Zuletzt gelöscht) verschieben, wird von Ihren anderen Geräten entfernt, ihre Kopie auf dem Server wird jedoch aufbewahrt, bis Sie Ihr Konto löschen. Eine Audiodatei, die Sie von einer Partitur entfernen, wird etwa 30 Tage später vom Server gelöscht, und die Audiodateien einer Partitur, die Sie nach „Recently Deleted“ verschieben, werden etwa 30 Tage nach dem Verschieben gelöscht. Außerdem können wir Audiodateien oder andere Inhalte nach einer Meldung einer Rechtsverletzung entfernen, wie in den [folino-Nutzungsbedingungen](/terms/en/) beschrieben.
 - **Löschen Ihres Kontos.** „Settings → Account → Delete Account…“ (Einstellungen → Konto → Konto löschen…) löscht Ihr Konto zusammen mit den dafür gespeicherten Partituren, Anmerkungen, dem Bearbeitungsverlauf, dem Profil und den Fotos und entfernt Sie aus Ihren Gruppen (eine Gruppe, deren letztes Mitglied Sie waren, wird gelöscht). Partituren, die Sie einer weiterhin bestehenden Gruppe hinzugefügt haben, bleiben für deren andere Mitglieder verfügbar, und Kopien, die bereits auf die Geräte anderer Mitglieder heruntergeladen wurden, können nicht zurückgeholt werden. Daten auf Ihrem eigenen Gerät werden durch das Löschen Ihres Kontos nicht gelöscht.
