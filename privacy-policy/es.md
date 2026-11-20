@@ -56,7 +56,7 @@ No compartimos información personal con terceros, salvo en los casos descritos 
 - **Resend** — envío de los correos electrónicos de inicio de sesión.
 - **Apple y Google** — cuando elige «Iniciar sesión con Apple» o «Iniciar sesión con Google», ese servicio gestiona su inicio de sesión conforme a su propia política de privacidad. Cuando compra una suscripción, App Store o Google Play procesa además el pago conforme a sus propios términos y su propia política de privacidad.
 - **Microsoft** — cuando compra una suscripción en Windows, Microsoft Store procesa el pago conforme a sus propios términos y su propia política de privacidad.
-- **GitHub** — folino descarga sonidos de instrumentos adicionales desde GitHub, que recibe la información estándar de la solicitud, como su dirección de red.
+- **GitHub** — folino descarga sonidos de instrumentos adicionales, así como el modelo que utiliza para separar una grabación en pistas (stems), desde GitHub, que recibe la información estándar de la solicitud, como su dirección de red.
 
 El contenido que añade a un grupo compartido se comparte, por su propia naturaleza, con los miembros de ese grupo.
 

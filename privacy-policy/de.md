@@ -56,7 +56,7 @@ Wir geben personenbezogene Daten nicht an Dritte weiter, außer wie in dieser Er
 - **Resend** – Zustellung von Anmelde-E-Mails.
 - **Apple und Google** – wenn Sie „Mit Apple anmelden“ oder „Über Google anmelden“ wählen, wickelt dieser Dienst Ihre Anmeldung gemäß seiner eigenen Datenschutzerklärung ab. Wenn Sie ein Abonnement kaufen, wickelt außerdem der App Store bzw. Google Play die Zahlung nach den jeweils eigenen Bedingungen und der jeweils eigenen Datenschutzerklärung ab.
 - **Microsoft** – wenn Sie unter Windows ein Abonnement kaufen, wickelt der Microsoft Store die Zahlung nach seinen eigenen Bedingungen und seiner eigenen Datenschutzerklärung ab.
-- **GitHub** – folino lädt zusätzliche Instrumentenklänge von GitHub herunter; GitHub erhält dabei standardmäßige Anfrageinformationen wie Ihre Netzwerkadresse.
+- **GitHub** – folino lädt zusätzliche Instrumentenklänge sowie das Modell, mit dem es eine Aufnahme in Einzelspuren (Stems) trennt, von GitHub herunter; GitHub erhält dabei standardmäßige Anfrageinformationen wie Ihre Netzwerkadresse.
 
 Inhalte, die Sie einer geteilten Gruppe hinzufügen, werden bestimmungsgemäß mit den Mitgliedern dieser Gruppe geteilt.
 

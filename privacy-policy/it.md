@@ -56,7 +56,7 @@ Non comunichiamo dati personali a terzi, salvo nei casi descritti nella presente
 - **Resend** — invio delle e-mail di accesso.
 - **Apple e Google** — quando scegli "Accedi con Apple" o "Accedi con Google", tale servizio gestisce il tuo accesso in base alla propria informativa sulla privacy. Quando acquisti un abbonamento, l'App Store o Google Play elabora inoltre il pagamento in base ai propri termini e alla propria informativa sulla privacy.
 - **Microsoft** — quando acquisti un abbonamento su Windows, il Microsoft Store elabora il pagamento in base ai propri termini e alla propria informativa sulla privacy.
-- **GitHub** — folino scarica suoni di strumenti aggiuntivi da GitHub, che riceve le informazioni standard della richiesta, come il tuo indirizzo di rete.
+- **GitHub** — folino scarica suoni di strumenti aggiuntivi, nonché il modello che utilizza per separare una registrazione in tracce (stem), da GitHub, che riceve le informazioni standard della richiesta, come il tuo indirizzo di rete.
 
 I contenuti che aggiungi a un gruppo condiviso sono, per loro natura, condivisi con i membri di quel gruppo.
 

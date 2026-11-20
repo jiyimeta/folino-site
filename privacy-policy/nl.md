@@ -56,7 +56,7 @@ Wij verstrekken geen persoonsgegevens aan derden, behalve zoals beschreven in di
 - **Resend** — bezorging van inlog-e-mails.
 - **Apple en Google** — wanneer je kiest voor "Log in met Apple" of "Inloggen met Google", handelt die dienst je aanmelding af onder zijn eigen privacybeleid. Wanneer je een abonnement koopt, verwerkt de App Store of Google Play bovendien de betaling onder eigen voorwaarden en eigen privacybeleid.
 - **Microsoft** — wanneer je op Windows een abonnement koopt, verwerkt de Microsoft Store de betaling onder eigen voorwaarden en eigen privacybeleid.
-- **GitHub** — folino downloadt aanvullende instrumentklanken van GitHub, dat standaard verzoekgegevens zoals je netwerkadres ontvangt.
+- **GitHub** — folino downloadt aanvullende instrumentklanken, en het model waarmee het een opname in afzonderlijke sporen (stems) scheidt, van GitHub, dat standaard verzoekgegevens zoals je netwerkadres ontvangt.
 
 Inhoud die je aan een gedeelde groep toevoegt, wordt uit de aard der zaak gedeeld met de leden van die groep.
 

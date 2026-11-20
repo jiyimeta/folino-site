@@ -56,7 +56,7 @@ Bu politikada açıklanan durumlar veya yasaların gerektirdiği durumlar dış�
 - **Resend** — oturum açma e-postalarının teslimi.
 - **Apple ve Google** — "Apple ile Giriş Yap" veya "Sign in with Google" seçeneğini seçtiğinizde, oturum açma işleminiz ilgili hizmet tarafından kendi gizlilik politikası kapsamında gerçekleştirilir. Bir abonelik satın aldığınızda, ödemeyi ayrıca App Store veya Google Play kendi koşulları ve gizlilik politikası kapsamında işler.
 - **Microsoft** — Windows'ta bir abonelik satın aldığınızda, ödemeyi Microsoft Store kendi koşulları ve gizlilik politikası kapsamında işler.
-- **GitHub** — folino, ek enstrüman seslerini GitHub'dan indirir; GitHub, ağ adresiniz gibi standart istek bilgilerini alır.
+- **GitHub** — folino, ek enstrüman seslerini ve bir kaydı ayrı parçalara (stem) ayırmak için kullandığı modeli GitHub'dan indirir; GitHub, ağ adresiniz gibi standart istek bilgilerini alır.
 
 Paylaşılan bir gruba eklediğiniz içerik, tasarımı gereği o grubun üyeleriyle paylaşılır.
 

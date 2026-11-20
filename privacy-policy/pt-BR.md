@@ -56,7 +56,7 @@ Não compartilhamos informações pessoais com terceiros, exceto conforme descri
 - **Resend** — envio dos e-mails de login.
 - **Apple e Google** — quando você escolhe "Iniciar Sessão com a Apple" ou "Fazer login com o Google", esse serviço cuida do seu login de acordo com a própria política de privacidade. Quando você compra uma assinatura, a App Store ou o Google Play também processa o pagamento de acordo com seus próprios termos e sua própria política de privacidade.
 - **Microsoft** — quando você compra uma assinatura no Windows, a Microsoft Store processa o pagamento de acordo com seus próprios termos e sua própria política de privacidade.
-- **GitHub** — o folino baixa sons de instrumentos adicionais do GitHub, que recebe informações padrão da solicitação, como seu endereço de rede.
+- **GitHub** — o folino baixa sons de instrumentos adicionais, bem como o modelo que usa para separar uma gravação em faixas (stems), do GitHub, que recebe informações padrão da solicitação, como seu endereço de rede.
 
 O conteúdo que você adiciona a um grupo compartilhado é, por natureza, compartilhado com os membros desse grupo.
 

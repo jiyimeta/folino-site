@@ -56,7 +56,7 @@ We do not share personal information with third parties, except as described in 
 - **Resend** — delivery of sign-in e-mails.
 - **Apple and Google** — when you choose Sign in with Apple or Sign in with Google, that service handles your sign-in under its own privacy policy. When you buy a subscription, the App Store or Google Play also processes the payment under its own terms and privacy policy.
 - **Microsoft** — when you buy a subscription on Windows, the Microsoft Store processes the payment under its own terms and privacy policy.
-- **GitHub** — folino downloads additional instrument sounds from GitHub, which receives standard request information such as your network address.
+- **GitHub** — folino downloads additional instrument sounds, and the model it uses to separate a recording into stems, from GitHub, which receives standard request information such as your network address.
 
 Content you add to a shared group is, by design, shared with that group's members.
 

@@ -56,7 +56,7 @@ folino 不會顯示廣告。我們不會出售個人資訊，也不會將其用�
 - **Resend**：寄送登入郵件。
 - **Apple 與 Google**：當您選擇「使用 Apple 登入」或「使用 Google 登入」時，由相應服務依其自身的隱私政策處理您的登入。當您購買訂閱時，App Store 或 Google Play 也會依其自身的條款與隱私政策處理付款。
 - **Microsoft**：當您在 Windows 上購買訂閱時，Microsoft Store 會依其自身的條款與隱私政策處理付款。
-- **GitHub**：folino 會從 GitHub 下載額外的樂器音源，GitHub 會收到您的網路位址等標準請求資訊。
+- **GitHub**：folino 會從 GitHub 下載額外的樂器音源，以及用於將錄音分離為分軌的模型，GitHub 會收到您的網路位址等標準請求資訊。
 
 您加入共享群組的內容，依其設計會與該群組的成員共享。
 

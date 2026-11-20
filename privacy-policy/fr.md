@@ -56,7 +56,7 @@ Nous ne communiquons pas de renseignements personnels à des tiers, sauf dans le
 - **Resend** — envoi des e-mails de connexion.
 - **Apple et Google** — lorsque vous choisissez « Se connecter avec Apple » ou « Se connecter avec Google », ce service gère votre connexion conformément à sa propre politique de confidentialité. Lorsque vous souscrivez un abonnement, l'App Store ou Google Play traite en outre le paiement selon ses propres conditions et sa propre politique de confidentialité.
 - **Microsoft** — lorsque vous souscrivez un abonnement sous Windows, le Microsoft Store traite le paiement selon ses propres conditions et sa propre politique de confidentialité.
-- **GitHub** — folino télécharge des sons d'instruments supplémentaires depuis GitHub, qui reçoit les informations standard de la requête, telles que votre adresse réseau.
+- **GitHub** — folino télécharge des sons d'instruments supplémentaires, ainsi que le modèle qu'il utilise pour séparer un enregistrement en pistes (stems), depuis GitHub, qui reçoit les informations standard de la requête, telles que votre adresse réseau.
 
 Le contenu que vous ajoutez à un groupe partagé est, par nature, partagé avec les membres de ce groupe.
 
