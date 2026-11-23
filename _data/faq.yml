@@ -128,23 +128,23 @@ entries:
     en:
       q: Which devices does folino run on?
       a: |
-        iPhone and iPad (iOS 18 or later), Mac (macOS 15 or later), and Android (Android 9 or later). Sign in with the same account and your scores sync across all of them.
+        iPhone and iPad (iOS 18 or later), Mac (macOS 15 or later), Android (Android 9 or later), and Windows (Windows 10 version 1809 or later). Sign in with the same account and your scores sync across all of them.
     ja:
       q: どの端末で使えますか？
       a: |
-        iPhoneとiPad（iOS 18以降）、Mac（macOS 15以降）、Android（Android 9以降）で使えます。同じアカウントでサインインすれば、端末の種類をまたいで楽譜を同期できます。
+        iPhoneとiPad（iOS 18以降）、Mac（macOS 15以降）、Android（Android 9以降）、Windows（Windows 10 バージョン1809以降）で使えます。同じアカウントでサインインすれば、端末の種類をまたいで楽譜を同期できます。
     ko:
       q: 어떤 기기에서 사용할 수 있나요?
       a: |
-        iPhone과 iPad(iOS 18 이상), Mac(macOS 15 이상), Android(Android 9 이상)에서 사용할 수 있습니다. 같은 계정으로 로그인하면 기기 종류에 관계없이 악보를 동기화할 수 있습니다.
+        iPhone과 iPad(iOS 18 이상), Mac(macOS 15 이상), Android(Android 9 이상), Windows(Windows 10 버전 1809 이상)에서 사용할 수 있습니다. 같은 계정으로 로그인하면 기기 종류에 관계없이 악보를 동기화할 수 있습니다.
     zh-Hans:
       q: 可以在哪些设备上使用？
       a: |
-        支持 iPhone 和 iPad（iOS 18 或更高版本）、Mac（macOS 15 或更高版本）以及 Android（Android 9 或更高版本）。使用同一个账户登录，就能跨设备类型同步乐谱。
+        支持 iPhone 和 iPad（iOS 18 或更高版本）、Mac（macOS 15 或更高版本）、Android（Android 9 或更高版本）以及 Windows（Windows 10 版本 1809 或更高版本）。使用同一个账户登录，就能跨设备类型同步乐谱。
     zh-Hant:
       q: 可以在哪些裝置上使用？
       a: |
-        支援 iPhone 與 iPad（iOS 18 或以上版本）、Mac（macOS 15 或以上版本）以及 Android（Android 9 或以上版本）。使用同一個帳戶登入，就能跨裝置類型同步樂譜。
+        支援 iPhone 與 iPad（iOS 18 或以上版本）、Mac（macOS 15 或以上版本）、Android（Android 9 或以上版本）以及 Windows（Windows 10 版本 1809 或以上版本）。使用同一個帳戶登入，就能跨裝置類型同步樂譜。
 
   - id: file-formats
     category: files
@@ -475,30 +475,30 @@ entries:
     en:
       q: How do I cancel a subscription?
       a: |
-        If you subscribed on iPhone, iPad, or Mac, cancel in your Apple Account settings; if you subscribed on Android, cancel from Subscriptions in Google Play. You can cancel at any time.
+        If you subscribed on iPhone, iPad, or Mac, cancel in your Apple Account settings; if you subscribed on Android, cancel from Subscriptions in Google Play; if you subscribed on Windows, cancel from your Microsoft account. You can cancel at any time.
 
         After you cancel, your scores and marks stay as they are, and you can still open and edit them. What stops is syncing more scores and growing your groups.
     ja:
       q: サブスクリプションを解約するには？
       a: |
-        iPhone、iPad、Macで購入した場合はApple Accountの設定から、Androidで購入した場合はGoogle Playの定期購入の画面から、いつでも解約できます。
+        iPhone、iPad、Macで購入した場合はApple Accountの設定から、Androidで購入した場合はGoogle Playの定期購入の画面から、Windowsで購入した場合はMicrosoftアカウントから、いつでも解約できます。
 
         解約しても、それまでの楽譜や書き込みは消えず、そのまま開いて編集できます。同期する楽譜を増やすことや、グループを広げることが止まるだけです。
     ko:
       q: 구독을 해지하려면?
       a: |
-        iPhone, iPad, Mac에서 구매했다면 Apple 계정 설정에서, Android에서 구매했다면 Google Play의 구독 화면에서 언제든지 해지할 수 있습니다.
+        iPhone, iPad, Mac에서 구매했다면 Apple 계정 설정에서, Android에서 구매했다면 Google Play의 구독 화면에서, Windows에서 구매했다면 Microsoft 계정에서 언제든지 해지할 수 있습니다.
 
         해지해도 그동안의 악보와 필기는 사라지지 않으며, 그대로 열어서 편집할 수 있습니다. 동기화하는 악보를 늘리거나 그룹을 키우는 것만 멈춥니다.
     zh-Hans:
       q: 如何取消订阅？
       a: |
-        如果是在 iPhone、iPad 或 Mac 上购买的，可以在 Apple 账户设置中取消；如果是在 Android 上购买的，可以在 Google Play 的“订阅”页面中取消。随时都可以取消。
+        如果是在 iPhone、iPad 或 Mac 上购买的，可以在 Apple 账户设置中取消；如果是在 Android 上购买的，可以在 Google Play 的“订阅”页面中取消；如果是在 Windows 上购买的，可以在 Microsoft 账户中取消。随时都可以取消。
 
         取消订阅后，之前的乐谱和批注不会消失，仍然可以打开和编辑。只是无法再增加同步的乐谱，或扩大群组。
     zh-Hant:
       q: 如何取消訂閱？
       a: |
-        如果是在 iPhone、iPad 或 Mac 上購買的，可以在 Apple 帳號設定中取消；如果是在 Android 上購買的，可以在 Google Play 的「訂閱」頁面中取消。隨時都可以取消。
+        如果是在 iPhone、iPad 或 Mac 上購買的，可以在 Apple 帳號設定中取消；如果是在 Android 上購買的，可以在 Google Play 的「訂閱」頁面中取消；如果是在 Windows 上購買的，可以在 Microsoft 帳戶中取消。隨時都可以取消。
 
         取消訂閱後，之前的樂譜與註記不會消失，仍然可以開啟與編輯。只是無法再增加同步的樂譜，或擴大群組。
