@@ -134,7 +134,7 @@ ja:
 
   download:
     title: folinoを無料でダウンロード
-    note: iPhone、iPad、MacはApp Storeから、AndroidはGoogle Playから。
+    note: iPhone、iPad、MacはApp Storeから、AndroidはGoogle Playから、WindowsはMicrosoft Storeから。
 
   # The FAQ page's own words; its questions are in folino_faq.yml.
   faq_page:
@@ -257,7 +257,7 @@ en:
 
   download:
     title: Get folino for free
-    note: iPhone, iPad, and Mac on the App Store; Android on Google Play.
+    note: iPhone, iPad, and Mac on the App Store; Android on Google Play; Windows on the Microsoft Store.
 
   faq_page:
     lead: Questions and answers about using folino, what it costs, and how it handles your data.
@@ -376,7 +376,7 @@ ko:
 
   download:
     title: folino 무료 다운로드
-    note: iPhone, iPad, Mac은 App Store에서, Android는 Google Play에서.
+    note: iPhone, iPad, Mac은 App Store에서, Android는 Google Play에서, Windows는 Microsoft Store에서.
 
   faq_page:
     lead: folino의 사용법, 요금, 데이터 처리에 관한 질문과 답변입니다.
@@ -493,7 +493,7 @@ zh-Hans:
 
   download:
     title: 免费下载 folino
-    note: iPhone、iPad 和 Mac 请前往 App Store，Android 请前往 Google Play。
+    note: iPhone、iPad 和 Mac 请前往 App Store，Android 请前往 Google Play，Windows 请前往 Microsoft Store。
 
   faq_page:
     lead: 关于 folino 的使用方法、价格和数据处理的问题与解答。
@@ -610,7 +610,7 @@ zh-Hant:
 
   download:
     title: 免費下載 folino
-    note: iPhone、iPad 與 Mac 請前往 App Store，Android 請前往 Google Play。
+    note: iPhone、iPad 與 Mac 請前往 App Store，Android 請前往 Google Play，Windows 請前往 Microsoft Store。
 
   faq_page:
     lead: 關於 folino 的使用方式、價格與資料處理的問題與解答。

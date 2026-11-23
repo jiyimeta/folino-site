@@ -1,6 +1,6 @@
 {%- comment -%}
-  folino's two store badges, pointed at this page's language: `_data/stores.yml` swaps the App Store
-  country and adds Google Play's `hl`.
+  folino's three store badges, pointed at this page's language: `_data/stores.yml` swaps the App Store
+  country, adds Google Play's `hl`, and gives the Microsoft Store its language and market.
 {%- endcomment -%}
 {%- assign badge = site.data.badges[page.locale] -%}
 {%- assign store = site.data.stores[page.locale] -%}
@@ -10,6 +10,7 @@
 {%- assign ios_url = ios_url | append: '?l=' | append: store.apple_lang -%}
 {%- endif -%}
 {%- assign android_url = site.data.folino.links.android | append: '&hl=' | append: store.play -%}
+{%- assign windows_url = site.data.folino.links.windows | append: '?hl=' | append: store.ms_lang | append: '&gl=' | append: store.ms_market -%}
 <ul class="fol-badges">
   <li>
     <a class="store-badge" href="{{ ios_url }}">
@@ -21,6 +22,12 @@
     <a class="store-badge" href="{{ android_url }}">
       <img src="{{ '/assets/badges/google-play-' | append: page.locale | append: '.png' | relative_url }}"
            width="{{ badge.android.width }}" height="{{ badge.android.height }}" alt="{{ t.stores.android }}">
+    </a>
+  </li>
+  <li>
+    <a class="store-badge" href="{{ windows_url }}">
+      <img src="{{ '/assets/badges/microsoft-store-' | append: page.locale | append: '.svg' | relative_url }}"
+           width="{{ badge.windows.width }}" height="{{ badge.windows.height }}" alt="{{ t.stores.windows }}">
     </a>
   </li>
 </ul>

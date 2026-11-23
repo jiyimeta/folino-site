@@ -9,6 +9,7 @@ en:
   stores:
     ios: App Store
     android: Google Play
+    windows: Microsoft Store
 
 ja:
   language_label: 言語
@@ -18,6 +19,7 @@ ja:
   stores:
     ios: App Store
     android: Google Play
+    windows: Microsoft Store
 
 ko:
   language_label: 언어
@@ -27,6 +29,7 @@ ko:
   stores:
     ios: App Store
     android: Google Play
+    windows: Microsoft Store
 
 zh-Hans:
   language_label: 语言
@@ -36,6 +39,7 @@ zh-Hans:
   stores:
     ios: App Store
     android: Google Play
+    windows: Microsoft Store
 
 zh-Hant:
   language_label: 語言
@@ -45,6 +49,7 @@ zh-Hant:
   stores:
     ios: App Store
     android: Google Play
+    windows: Microsoft Store
 
 # The languages below have only the privacy policy (see _data/locales.yml).
 
@@ -56,6 +61,7 @@ de:
   stores:
     ios: App Store
     android: Google Play
+    windows: Microsoft Store
 
 es:
   language_label: Idioma
@@ -65,6 +71,7 @@ es:
   stores:
     ios: App Store
     android: Google Play
+    windows: Microsoft Store
 
 fr:
   language_label: Langue
@@ -74,6 +81,7 @@ fr:
   stores:
     ios: App Store
     android: Google Play
+    windows: Microsoft Store
 
 it:
   language_label: Lingua
@@ -83,6 +91,7 @@ it:
   stores:
     ios: App Store
     android: Google Play
+    windows: Microsoft Store
 
 nl:
   language_label: Taal
@@ -92,6 +101,7 @@ nl:
   stores:
     ios: App Store
     android: Google Play
+    windows: Microsoft Store
 
 pt-BR:
   language_label: Idioma
@@ -101,6 +111,7 @@ pt-BR:
   stores:
     ios: App Store
     android: Google Play
+    windows: Microsoft Store
 
 ru:
   language_label: Язык
@@ -110,6 +121,7 @@ ru:
   stores:
     ios: App Store
     android: Google Play
+    windows: Microsoft Store
 
 tr:
   language_label: Dil
@@ -119,3 +131,4 @@ tr:
   stores:
     ios: App Store
     android: Google Play
+    windows: Microsoft Store
